@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="828e1c7e-0f93-4524-89dc-4a3bbbfd08c7" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ModuleForm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="715">
+              <caret line="65" column="42" lean-forward="true" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/Module.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1062">
+              <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#1902#2061#0" />
+                <element signature="e#2133#2491#0" />
+                <element signature="e#2682#3809#0" />
+                <element signature="e#4483#4823#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sandbox.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-729">
+              <caret line="93" column="26" lean-forward="true" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#122#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ModuleBtn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1359">
+              <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>views</find>
+      <find>input_definer_values</find>
+      <find>seta</find>
+      <find>import_all_modules</find>
+      <find>print</find>
+      <find>transform</find>
+      <find>'-'</find>
+      <find>w =</find>
+      <find>'value</find>
+      <find>aviv</find>
+      <find>import copy</find>
+      <find>getattr(self.data</find>
+      <find>grid</find>
+      <find>Pne</find>
+      <find>load_from_file</find>
+      <find>rb</find>
+      <find>create_module</find>
+      <find>setattr</find>
+      <find>import_all_modules_from_pickle</find>
+      <find>add_module</find>
+      <find>fail</find>
+      <find>give all</find>
+      <find>gave a</find>
+      <find>*20</find>
+      <find>Module.get</find>
+      <find>print(</find>
+      <find>clear_all_modules</find>
+      <find>inspec</find>
+      <find>inspect</find>
+      <find>del</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>libPyROOT</replace>
+      <replace>exp</replace>
+      <replace>ModuleInputForm</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/may23</dir>
+      <dir>$PROJECT_DIR$/</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/david.py" />
+        <option value="$PROJECT_DIR$/a.py" />
+        <option value="$PROJECT_DIR$/pyana.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/modules/AddTwo.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/help.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/ModuleBtn.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/modules/module.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/modules/One.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/modules/AddOne.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/modules/AddNum.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/moduleGUI.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/sandbox.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/main.py" />
+        <option value="$PROJECT_DIR$/t.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/ModuleForm.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/ResultView.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/modules/OpenFile.py" />
+        <option value="$PROJECT_DIR$/t2.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/modules/RowNoiseGraph.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/modules/Mask.py" />
+        <option value="$PROJECT_DIR$/pyqt-dragndrop/modules/Module.py" />
+        <option value="$PROJECT_DIR$/../old/t2.py" />
+        <option value="$PROJECT_DIR$/modules/DIst.py" />
+        <option value="$PROJECT_DIR$/modules/Dist.py" />
+        <option value="$PROJECT_DIR$/modules/One.py" />
+        <option value="$PROJECT_DIR$/modules/AddOne.py" />
+        <option value="$PROJECT_DIR$/may23/toolbar.py" />
+        <option value="$PROJECT_DIR$/temp.py" />
+        <option value="$PROJECT_DIR$/ResultViewWindow.py" />
+        <option value="$PROJECT_DIR$/modules/FileMask.py" />
+        <option value="$PROJECT_DIR$/modules/Mask.py" />
+        <option value="$PROJECT_DIR$/modules/AddNum.py" />
+        <option value="$PROJECT_DIR$/ResultToolbar.py" />
+        <option value="$PROJECT_DIR$/ModuleBtn.py" />
+        <option value="$PROJECT_DIR$/toolbar.py" />
+        <option value="$PROJECT_DIR$/modules/Reducer.py" />
+        <option value="$PROJECT_DIR$/modules/OpenFile.py" />
+        <option value="$PROJECT_DIR$/ResultView.py" />
+        <option value="$PROJECT_DIR$/modules/RowNoiseGraph.py" />
+        <option value="$PROJECT_DIR$/modules/Creator.py" />
+        <option value="$PROJECT_DIR$/moduleGUI.py" />
+        <option value="$PROJECT_DIR$/help.py" />
+        <option value="$PROJECT_DIR$/m/One" />
+        <option value="$PROJECT_DIR$/ModulesManager.py" />
+        <option value="$PROJECT_DIR$/m/temp/One.py" />
+        <option value="$PROJECT_DIR$/sandbox.py" />
+        <option value="$PROJECT_DIR$/Input.py" />
+        <option value="$PROJECT_DIR$/ModuleInputForm.py" />
+        <option value="$PROJECT_DIR$/modules/Module.py" />
+        <option value="$PROJECT_DIR$/ModuleForm.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="704" />
+    <option name="y" value="27" />
+    <option name="width" value="1617" />
+    <option name="height" value="1059" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dark" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dark" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dark" type="462c0819:PsiDirectoryNode" />
+              <item name="m" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dark" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dark" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="dark" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="dark" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/modules" />
+      <recent name="$PROJECT_DIR$/assets/icons" />
+      <recent name="$PROJECT_DIR$/pyqt-dragndrop" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/m" />
+      <recent name="$PROJECT_DIR$/modules" />
+      <recent name="$PROJECT_DIR$/old" />
+      <recent name="$PROJECT_DIR$/pyqt-dragndrop/old" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="Creator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="dark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/modules" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/modules/Creator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="help" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="dark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/help.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="dark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyqt-dragndrop" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="dark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="toolbar" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="dark" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/toolbar.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.Creator" />
+        <item itemvalue="Python.help" />
+        <item itemvalue="Python.toolbar" />
+        <item itemvalue="Python.temp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="828e1c7e-0f93-4524-89dc-4a3bbbfd08c7" name="Default Changelist" comment="" />
+      <created>1560374694706</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560374694706</updated>
+      <workItem from="1560374695792" duration="747000" />
+      <workItem from="1560539839049" duration="6585000" />
+      <workItem from="1560595262330" duration="11597000" />
+      <workItem from="1560609800991" duration="22210000" />
+      <workItem from="1560714563777" duration="3250000" />
+      <workItem from="1560794788949" duration="10488000" />
+      <workItem from="1560877105529" duration="14368000" />
+      <workItem from="1562440532159" duration="7466000" />
+      <workItem from="1562448768719" duration="144000" />
+      <workItem from="1562524704848" duration="5708000" />
+      <workItem from="1562614386519" duration="8374000" />
+      <workItem from="1562704788607" duration="3011000" />
+      <workItem from="1562873465747" duration="7387000" />
+      <workItem from="1563043675173" duration="9006000" />
+      <workItem from="1563135096907" duration="3393000" />
+      <workItem from="1563213275232" duration="7955000" />
+      <workItem from="1563391910424" duration="3411000" />
+      <workItem from="1563556535765" duration="3179000" />
+      <workItem from="1563636207130" duration="5352000" />
+      <workItem from="1563735029744" duration="2824000" />
+      <workItem from="1563883158548" duration="1998000" />
+      <workItem from="1563916493565" duration="3176000" />
+      <workItem from="1564045989883" duration="6559000" />
+      <workItem from="1564057861353" duration="2856000" />
+      <workItem from="1564164507315" duration="5467000" />
+      <workItem from="1564234215496" duration="11095000" />
+      <workItem from="1564236901637" duration="45000" />
+      <workItem from="1564328436611" duration="10125000" />
+      <workItem from="1564358922442" duration="402000" />
+      <workItem from="1564611695211" duration="3007000" />
+      <workItem from="1564776832127" duration="3135000" />
+      <workItem from="1564946610321" duration="1294000" />
+      <workItem from="1565002862164" duration="1197000" />
+      <workItem from="1565018842047" duration="270000" />
+      <workItem from="1565019169565" duration="245000" />
+      <workItem from="1565372091068" duration="8064000" />
+      <workItem from="1565412425568" duration="5821000" />
+      <workItem from="1565464178774" duration="6089000" />
+      <workItem from="1565554843972" duration="10942000" />
+      <workItem from="1565614630495" duration="10769000" />
+      <workItem from="1565649627517" duration="3599000" />
+      <workItem from="1565707709563" duration="15518000" />
+      <workItem from="1565895811118" duration="275000" />
+      <workItem from="1565885280631" duration="91000" />
+      <workItem from="1565885373604" duration="10668000" />
+      <workItem from="1566041210851" duration="5966000" />
+      <workItem from="1566331590609" duration="3319000" />
+      <workItem from="1566374468970" duration="9541000" />
+      <workItem from="1566396572021" duration="1111000" />
+      <workItem from="1566462502807" duration="10089000" />
+      <workItem from="1566495581763" duration="2034000" />
+      <workItem from="1566499045793" duration="842000" />
+      <workItem from="1566564819474" duration="1335000" />
+      <workItem from="1566637263142" duration="8044000" />
+      <workItem from="1566670489523" duration="4061000" />
+      <workItem from="1566751600211" duration="876000" />
+      <workItem from="1566741845230" duration="654000" />
+      <workItem from="1566825359995" duration="2202000" />
+      <workItem from="1566906101145" duration="2740000" />
+      <workItem from="1566932638635" duration="1666000" />
+      <workItem from="1566949288665" duration="1125000" />
+      <workItem from="1567008429190" duration="3505000" />
+      <workItem from="1567017368532" duration="349000" />
+      <workItem from="1567018970660" duration="6185000" />
+      <workItem from="1567079513014" duration="1142000" />
+      <workItem from="1567093764764" duration="2404000" />
+      <workItem from="1567102175992" duration="1503000" />
+      <workItem from="1567276073670" duration="2324000" />
+      <workItem from="1567426289386" duration="1616000" />
+      <workItem from="1567621463462" duration="3553000" />
+      <workItem from="1567795185318" duration="3840000" />
+      <workItem from="1567862558111" duration="5082000" />
+      <workItem from="1567887898423" duration="322000" />
+      <workItem from="1567895520590" duration="899000" />
+      <workItem from="1568128885564" duration="13759000" />
+      <workItem from="1568194724851" duration="5000" />
+      <workItem from="1568202715050" duration="3000" />
+      <workItem from="1568211248739" duration="8995000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="373644000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="3373" height="1415" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31650135" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4998497" weight="0.32919255" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914337" weight="0.26164597" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49954915" weight="0.3998447" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32996893" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5192916" side_tool="true" weight="0.34871244" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.48070842" visible="true" weight="0.2523292" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49209362" weight="0.23990683" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24977458" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.012022844" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="573" height="1215" id="Documentation" order="5" side_tool="true" visible="true" weight="0.020433184" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29538268" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4998497" weight="0.32919255" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4914337" weight="0.26164597" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49954915" weight="0.3998447" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32996893" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5192916" side_tool="true" visible="true" weight="0.34871244" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.48070842" visible="true" weight="0.34871244" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49209362" weight="0.24034335" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24977458" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.012022844" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="573" height="1215" id="Documentation" order="5" side_tool="true" visible="true" weight="0.020433184" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sandbox.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dark$fitt.coverage" NAME="fitt Coverage Results" MODIFIED="1563218258423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$a.coverage" NAME="a Coverage Results" MODIFIED="1565415316336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$backend_interagg.coverage" NAME="backend_interagg Coverage Results" MODIFIED="1560718353779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_HOME_DIR$/helpers/pycharm_matplotlib_backend" />
+    <SUITE FILE_PATH="coverage/dark$poly.coverage" NAME="poly Coverage Results" MODIFIED="1564330409595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$sandbox.coverage" NAME="sandbox Coverage Results" MODIFIED="1565623615521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqt-dragndrop" />
+    <SUITE FILE_PATH="coverage/dark$ResultView.coverage" NAME="ResultView Coverage Results" MODIFIED="1565889507123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$modal.coverage" NAME="modal Coverage Results" MODIFIED="1565374839758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqt-dragndrop" />
+    <SUITE FILE_PATH="coverage/dark$y.coverage" NAME="y Coverage Results" MODIFIED="1563221444708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$a1.coverage" NAME="a1 Coverage Results" MODIFIED="1563392304645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/may23" />
+    <SUITE FILE_PATH="coverage/dark$Afel.coverage" NAME="Afel Coverage Results" MODIFIED="1564046448019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$toolbar.coverage" NAME="toolbar Coverage Results" MODIFIED="1566333833426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$load.coverage" NAME="load Coverage Results" MODIFIED="1564059906694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$temp.coverage" NAME="temp Coverage Results" MODIFIED="1566333526985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$main.coverage" NAME="main Coverage Results" MODIFIED="1565885086026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqt-dragndrop" />
+    <SUITE FILE_PATH="coverage/dark$help.coverage" NAME="help Coverage Results" MODIFIED="1566499168023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$ttt.coverage" NAME="ttt Coverage Results" MODIFIED="1562530623827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$Creator.coverage" NAME="Creator Coverage Results" MODIFIED="1566896712777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
+    <SUITE FILE_PATH="coverage/dark$moduleGUI.coverage" NAME="moduleGUI Coverage Results" MODIFIED="1565554961070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqt-dragndrop" />
+    <SUITE FILE_PATH="coverage/dark$dragbutton.coverage" NAME="dragbutton Coverage Results" MODIFIED="1565379424640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqt-dragndrop" />
+    <SUITE FILE_PATH="coverage/dark$t.coverage" NAME="t Coverage Results" MODIFIED="1565721390836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$david.coverage" NAME="david Coverage Results" MODIFIED="1565374499919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$resturant_area.coverage" NAME="resturant_area Coverage Results" MODIFIED="1565379941007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqt-dragndrop" />
+    <SUITE FILE_PATH="coverage/dark$t2.coverage" NAME="t2 Coverage Results" MODIFIED="1565726597840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/old/t2.py" />
+    <entry file="file://$PROJECT_DIR$/../old/t2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11160">
+          <caret line="745" column="30" selection-start-line="714" selection-start-column="20" selection-end-line="745" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/numpy/core/_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/AddTwo.py" />
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/matplotlib/backend_bases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23475">
+          <caret line="1584" selection-start-line="1584" selection-end-line="1584" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/matplotlib/backends/backend_qt5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3090">
+          <caret line="225" selection-start-line="225" selection-end-line="225" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filename.pickle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+          <folding>
+            <element signature="e#2#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a.jpg" />
+    <entry file="file://$PROJECT_DIR$/a" />
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/numpy/lib/function_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="4375" selection-start-line="4375" selection-end-line="4375" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Reducer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-2066100795/PyQt5/QtGui/QPainter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="135" column="34" selection-start-line="135" selection-start-column="34" selection-end-line="135" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Dist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="30" column="21" selection-start-line="21" selection-start-column="36" selection-end-line="30" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResultViewWindow.py" />
+    <entry file="file://$PROJECT_DIR$/ResultToolbar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-2066100795/PyQt5/QtWidgets/QLineEdit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5520">
+          <caret line="373" column="27" selection-start-line="373" selection-start-column="27" selection-end-line="373" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-2066100795/PyQt5/QtWidgets/QTextEdit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6810">
+          <caret line="459" column="19" selection-start-line="459" selection-start-column="12" selection-end-line="459" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-2066100795/PyQt5/QtWidgets/QSpinBox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="364" column="19" lean-forward="true" selection-start-line="364" selection-start-column="18" selection-end-line="364" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-2066100795/PyQt5/QtWidgets/QPushButton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ModuleInputForm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/b" />
+    <entry file="file://$PROJECT_DIR$/modules/FileMask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5430">
+          <caret line="690" column="55" selection-start-line="690" selection-start-column="19" selection-end-line="690" selection-end-column="55" />
+          <folding>
+            <element signature="e#77#258#0" />
+            <element signature="e#331#1208#0" />
+            <element signature="e#413#454#0" />
+            <element signature="e#599#1208#0" />
+            <element signature="e#791#890#0" />
+            <element signature="e#1008#1208#0" />
+            <element signature="e#1008#1046#0" />
+            <element signature="e#2204#2279#0" />
+            <element signature="e#5406#5704#0" />
+            <element signature="e#8027#8220#0" />
+            <element signature="e#8539#8659#0" />
+            <element signature="e#8591#8659#0" />
+            <element signature="e#8695#8793#0" />
+            <element signature="e#8867#9341#0" />
+            <element signature="e#8915#9321#0" />
+            <element signature="e#9090#9167#0" />
+            <element signature="e#9202#9261#0" />
+            <element signature="e#9515#9630#0" />
+            <element signature="e#9666#10066#0" />
+            <element signature="e#10126#10790#0" />
+            <element signature="e#10166#10460#0" />
+            <element signature="e#10487#10790#0" />
+            <element signature="e#10826#10857#0" />
+            <element signature="e#10915#13438#0" />
+            <element signature="e#11112#12673#0" />
+            <element signature="e#11272#11567#0" />
+            <element signature="e#11749#12036#0" />
+            <element signature="e#11778#11887#0" />
+            <element signature="e#11930#12036#0" />
+            <element signature="e#12365#12476#0" />
+            <element signature="e#12523#12673#0" />
+            <element signature="e#12563#12673#0" />
+            <element signature="e#12700#13005#0" />
+            <element signature="e#12862#13005#0" />
+            <element signature="e#13324#13419#0" />
+            <element signature="e#13523#13799#0" />
+            <element signature="e#13599#13777#0" />
+            <element signature="e#13852#14159#0" />
+            <element signature="e#13980#14104#0" />
+            <element signature="e#14229#14573#0" />
+            <element signature="e#14345#14549#0" />
+            <element signature="e#14373#14549#0" />
+            <element signature="e#14616#14780#0" />
+            <element signature="e#14814#14965#0" />
+            <element signature="e#15014#15047#0" />
+            <element signature="e#15093#15783#0" />
+            <element signature="e#15224#15761#0" />
+            <element signature="e#15343#15761#0" />
+            <element signature="e#15592#15761#0" />
+            <element signature="e#15656#15761#0" />
+            <element signature="e#15816#15941#0" />
+            <element signature="e#15979#16043#0" />
+            <element signature="e#16107#16750#0" />
+            <element signature="e#16114#16282#0" />
+            <element signature="e#16795#17416#0" />
+            <element signature="e#16802#16970#0" />
+            <element signature="e#17461#17891#0" />
+            <element signature="e#17468#17735#0" />
+            <element signature="e#17930#18028#0" />
+            <element signature="e#18110#18964#0" />
+            <element signature="e#18191#18964#0" />
+            <element signature="e#18225#18964#0" />
+            <element signature="e#18373#18728#0" />
+            <element signature="e#18520#18728#0" />
+            <element signature="e#18772#18844#0" />
+            <element signature="e#19561#19786#0" />
+            <element signature="e#19593#19670#0" />
+            <element signature="e#19827#20267#0" />
+            <element signature="e#20020#20189#0" />
+            <element signature="e#20319#20379#0" />
+            <element signature="e#20424#20483#0" />
+            <element signature="e#20522#20550#0" />
+            <element signature="e#20592#20621#0" />
+            <element signature="e#21020#23720#0" />
+            <element signature="e#21168#23583#0" />
+            <element signature="e#21596#23583#0" />
+            <element signature="e#21858#23098#0" />
+            <element signature="e#21927#23098#0" />
+            <element signature="e#22030#23098#0" />
+            <element signature="e#22090#22525#0" />
+            <element signature="e#22563#22650#0" />
+            <element signature="e#22728#22907#0" />
+            <element signature="e#22982#23098#0" />
+            <element signature="e#23597#23638#0" />
+            <element signature="e#24103#24339#0" />
+            <element signature="e#25218#25269#0" />
+            <element signature="e#25305#25485#0" />
+            <element signature="e#25389#25466#0" />
+            <element signature="e#25539#26288#0" />
+            <element signature="e#25585#25633#0" />
+            <element signature="e#25660#25753#0" />
+            <element signature="e#25885#26218#0" />
+            <element signature="e#25968#26218#0" />
+            <element signature="e#26091#26218#0" />
+            <element signature="e#26326#28081#0" />
+            <element signature="e#26394#26764#0" />
+            <element signature="e#26836#27354#0" />
+            <element signature="e#26900#26932#0" />
+            <element signature="e#27402#28081#0" />
+            <element signature="e#27456#27609#0" />
+            <element signature="e#27660#27770#0" />
+            <element signature="e#27712#27770#0" />
+            <element signature="e#27878#28026#0" />
+            <element signature="e#28114#28183#0" />
+            <element signature="e#28186#28212#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/a" />
+    <entry file="file://$PROJECT_DIR$/modules/RowNoiseGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/OpenFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/1" />
+    <entry file="file://$PROJECT_DIR$/m/bbbbb" />
+    <entry file="file://$PROJECT_DIR$/modules/Creator.py" />
+    <entry file="file://$PROJECT_DIR$/modules/AddNum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/One.py" />
+    <entry file="file://$PROJECT_DIR$/modules/Mask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aviv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResultView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="881">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#926#1487#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/AddOne.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ModulesManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-284">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/temp/new Module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/temp/new Module.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moduleGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toolbar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1067">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-729">
+          <caret line="93" column="26" lean-forward="true" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/One">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="62" lean-forward="true" selection-start-column="62" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/temp/One.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="171" lean-forward="true" selection-start-line="171" selection-end-line="171" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#1902#2061#0" />
+            <element signature="e#2133#2491#0" />
+            <element signature="e#2682#3809#0" />
+            <element signature="e#4483#4823#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ModuleForm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="65" column="42" lean-forward="true" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ModuleBtn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1359">
+          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
