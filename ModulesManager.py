@@ -4,7 +4,8 @@ from functools import partial
 from Input import Input
 from ModuleForm import ModuleForm
 import os
-import pickle
+# import pickle
+import json
 class ModulesManager(QMainWindow):
     def __init__(self, parent, name = False, inputs = []):
         super().__init__(parent)
@@ -59,7 +60,7 @@ class ModulesManager(QMainWindow):
         p = self.dic+'/' + name
 
         with open(p, 'rb') as handle:
-            b = pickle.load(handle)
+            b = json.load(handle)
             if 'views' not in b:
                 b['views'] = []
         m = ModuleForm(self, b['name'], b['keys'], b['views'], b['code'], folder=self.dic+'/')

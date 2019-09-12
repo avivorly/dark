@@ -2,7 +2,8 @@ from PyQt5 import QtCore, QtGui
 from PyQt5.QtWidgets import QGridLayout, QDialog, QMainWindow ,QPushButton, QScrollArea, QDesktopWidget, QLabel, QDialogButtonBox, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QApplication, QSpinBox,QCheckBox,QFileDialog
 from functools import partial
 from Input import Input
-import pickle
+# import pickle
+import json
 class ModuleForm(QMainWindow):
     def __init__(self, parent, name = False, inputs = [], views = [], code = '', folder = ''):
         self.folder = folder
@@ -43,7 +44,8 @@ class ModuleForm(QMainWindow):
         for input_v in views:
             Input(self, 'group', None, {'add_delete': True, 'o': self.input_v, 'general_name': 'view', 'group_type':'view_definer', 'input_definer_values': input_v})
 
-        Input(self, 'text', 'code')
+        Input(self, 'texteditor', 'code')
+
 
 
     def add_input(self):
@@ -58,9 +60,19 @@ class ModuleForm(QMainWindow):
 
     def save(self):
         name = self.o['module name']
-        keys = [[v['name'], v['type'], v['default']] for k,v in self.input_h.items()]
+        print(self.input_h)
+        # keys = [[] for _,v in self.input_h.values()]
+        keys = [list(v.values()) for _, v in self.input_h.items()]
+
         views = [list(v.values()) for _, v in self.input_v.items()]
-        with open(self.folder + name, 'wb') as handle:
-            pickle.dump({'name': name, 'keys':keys, 'views': views, 'code': self.o['code']}, handle, protocol=pickle.HIGHEST_PROTOCOL)
+        with open(self.folder + name, 'w') as outfile:
+            json.dump({'name': name, 'keys': keys, 'views': views, 'code': self.o['code']}, outfile)
+
         self.parent().load_from_path()
         self.parent().parent().parent().reload()
+
+
+
+
+
+

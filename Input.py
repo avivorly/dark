@@ -6,7 +6,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from functools import partial
 import numpy as np
-from PyQt5.QtWidgets import QGridLayout, QDialog, QMainWindow ,QPushButton, QScrollArea, QDesktopWidget, QLabel, QDialogButtonBox, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QApplication, QSpinBox,QCheckBox,QFileDialog
+from PyQt5.QtWidgets import QPlainTextEdit, QGridLayout, QDialog, QMainWindow ,QPushButton, QScrollArea, QDesktopWidget, QLabel, QDialogButtonBox, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QApplication, QSpinBox,QCheckBox,QFileDialog
 from ResultToolbar import ResultToolbar
 from PyQt5.QtWidgets import (QApplication, QCheckBox,
                              QGridLayout, QGroupBox, QHBoxLayout, QLabel, QLineEdit,
@@ -26,6 +26,7 @@ class Input(QWidget):
         super().__init__(parent)
         self.name = name
         self.opts = opts
+        self.type = type
         self.my_parent = parent
         if 'o' in opts:
             self.o = opts['o']
@@ -61,9 +62,12 @@ class Input(QWidget):
         if type == 'string':
             value = value or ''
             func_name, w = ['textChanged', QLineEdit(value)]
-        if type == 'text':
+        if type == 'text':  # embedded text
             value = value or ''
-            func_name, w = ['textChanged', QTextEdit(value)]
+            func_name, w = ['textChanged', QLineEdit(value)]
+        if type == 'texteditor':
+            value = value or ''
+            func_name, w = ['textChanged', QPlainTextEdit(value)]
         if type == 'integer':
             value = value or 0
             func_name, w = ['valueChanged', QSpinBox()]
@@ -82,6 +86,7 @@ class Input(QWidget):
             w.addItem("file")
             w.addItem("string")
             w.addItem("integer")
+            w.addItem("text")
             index = w.findText(value, QtCore.Qt.MatchFixedString)
             if index >= 0:
                 w.setCurrentIndex(index)
@@ -146,6 +151,9 @@ class Input(QWidget):
         # print(self.clipboardChanged)
         value = value or self.w.toPlainText()
         self.o[self.name] = value
+        if self.type is 'text':
+            self.o[self.name] = '"""{0}"""'.format(value)
+
         if 'call_on_update' in self.opts:
             self.opts['call_on_update'](self)
     def clear(self):

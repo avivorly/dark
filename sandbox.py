@@ -105,19 +105,19 @@ class SandBox(QGroupBox):
 
     def update_starter(self, starter):
 
-        import inspect
-        print('222222222222')
-        starter.module.process()
-        print('222222222222')
-        print(inspect.getsource(starter.module.process))
         self.starter = starter
-        # print(self.starter.data)
         for m in self.gui_modules:
             m.set_sarter(self.starter == m)
 
     def clear_all_modules(self, force = False):
-        buttonReply = force or QMessageBox.question(self, 'Clear sandbox', "Are you sure that you want to delete all modules?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-        if buttonReply == QMessageBox.Yes:
+        flag = False
+        if force:
+            flag = True
+        if not flag:
+            buttonReply = QMessageBox.question(self, 'Clear sandbox', "Are you sure that you want to delete all modules?",
+                                 QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+            flag = buttonReply == QMessageBox.Yes
+        if flag:
             for mg in self.gui_modules:
                 mg.setParent(None)
             self.gui_modules = []

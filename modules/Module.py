@@ -7,7 +7,8 @@ from matplotlib.figure import Figure
 # import ROOT
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
-import pickle
+# import pickle
+import json
 import importlib
 import sys, pkgutil
 
@@ -59,8 +60,8 @@ class Module():
             # m.gui = None
             arr.append(t)
 
-        with open(path, 'wb') as handle:
-            pickle.dump(arr, handle, protocol=pickle.HIGHEST_PROTOCOL)
+        with open(path, 'w') as handle:
+            json.dump(arr, handle)
 
     @classmethod
     def get_all_modules(cls):
@@ -78,8 +79,8 @@ class Module():
         path = 'm/'
         for m in os.listdir(path):
             if not os.path.isdir(path + m):
-                with open(path + m, 'rb') as handle:
-                    b = pickle.load(handle)
+                with open(path + m, 'r') as handle:
+                    b = json.load(handle)
                     try:
                         arr.append(cls.create_module(b))
                     except Exception:
@@ -102,10 +103,6 @@ class Module():
         name = opts['name']
         # print(sys.modules)
         # m = next(x for x in sys.modules if print(x) and x is name)
-        print('m:')
-        if 'One' in sys.modules:
-            print(sys.modules[name])
-
 
 
         before_lines = [
@@ -149,7 +146,7 @@ class Module():
         modules_clss = cls.get_all_modules()
         modules = []
         with open(path, 'rb') as handle:
-            saved_modules = pickle.load(handle)
+            saved_modules = json.load(handle)
             for saved_hash in saved_modules:
                 # print([d.__name__ for d in modules_clss])
                 try:
