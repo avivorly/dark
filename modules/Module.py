@@ -104,12 +104,12 @@ class Module():
         # print(sys.modules)
         # m = next(x for x in sys.modules if print(x) and x is name)
 
-
+        i = '    '
         before_lines = [
             'from modules.Module import Module',
             'import copy',
             'class {0}(Module):'.format(opts['name']),
-            '   def process(self):',
+            i + 'def process(self):',
         ]
 
         init_lines = [
@@ -118,11 +118,14 @@ class Module():
             'o = copy.deepcopy(self.o)'
         ]
 
+        # views = []
+        # for name, sug, value in opts['views']:
+        #     if sug in ['']
         views = ['["{0}","{1}",{2}]'.format(*k) for k in opts['views']]
 
         return_line = 'return data, [{0}]'.format(','.join(views))
 
-        i = '    '
+
         lines = before_lines + [i * 2 + l for l in init_lines + opts['code'].split('\n') + [return_line]]
 
 

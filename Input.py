@@ -64,7 +64,7 @@ class Input(QWidget):
             func_name, w = ['textChanged', QLineEdit(value)]
         if type == 'text':  # embedded text
             value = value or ''
-            func_name, w = ['textChanged', QLineEdit(value)]
+            func_name, w = ['textChanged', QLineEdit(value.replace('"""', ''))]
         if type == 'texteditor':
             value = value or ''
             func_name, w = ['textChanged', QPlainTextEdit(value)]
@@ -147,11 +147,10 @@ class Input(QWidget):
         QApplication.clipboard().setText('banana')
     def update_dic(self, value = None):
 
-        # print('-'*500)
         # print(self.clipboardChanged)
         value = value or self.w.toPlainText()
         self.o[self.name] = value
-        if self.type is 'text':
+        if self.type == 'text':
             self.o[self.name] = '"""{0}"""'.format(value)
 
         if 'call_on_update' in self.opts:

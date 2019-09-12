@@ -39,7 +39,7 @@ class ModuleForm(QMainWindow):
         save_btn.setIcon(QtGui.QIcon('assets/icons/save.png'))
         self.lay.addWidget(save_btn)
         for input_i in inputs:
-            Input(self, 'group', None, {'add_delete': True, 'o': self.input_i, 'group_type':'input_definer', 'input_definer_values': input_i})
+            Input(self, 'group', None, {'add_delete': True, 'o': self.input_h, 'group_type':'input_definer', 'input_definer_values': input_i})
 
         for input_v in views:
             Input(self, 'group', None, {'add_delete': True, 'o': self.input_v, 'general_name': 'view', 'group_type':'view_definer', 'input_definer_values': input_v})
