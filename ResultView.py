@@ -1,18 +1,13 @@
-from PyQt5 import QtCore
-from PyQt5.QtWidgets import QGridLayout, QDialog, QPushButton, QScrollArea, QDesktopWidget, QLabel, QDialogButtonBox, \
-    QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QApplication, QSpinBox, QCheckBox, QGroupBox, QMainWindow
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
-from functools import partial
-import numpy as np
+
 from ResultToolbar import ResultToolbar
-from PyQt5.QtWidgets import (QApplication, QCheckBox,
+from PyQt5.QtWidgets import (
                              QGridLayout, QGroupBox, QHBoxLayout, QLabel, QLineEdit,
                              QPushButton, QSizePolicy,
                              QSpinBox, QTableWidget,
                              QVBoxLayout, QWidget)
-from PyQt5.QtGui import QIcon, QScreen, QPixmap
+
 class Graph(FigureCanvas):
     def __init__(self,parent, xys, width=9, height=4, dpi=50):
         xs = xys[0]

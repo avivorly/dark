@@ -31,7 +31,6 @@ class Module():
             self.next_node.data = data
             next_extras = self.next_node.run()
             extras += next_extras
-        # print('I just finis my.{0}'.format(self.__class__.__name__))
         return extras
 
     def dumpp(self):
@@ -47,8 +46,6 @@ class Module():
             out['gui_props'] = [self.gui.x(), self.gui.y()]
 
         return out
-
-    # def load(self, pic):
 
     @classmethod
     def save_to_file(cls, modules, path):
@@ -88,21 +85,16 @@ class Module():
                         traceback.print_exc()
         return arr
 
-
-
-
     @classmethod
     def create_module(cls, opts):
         o = {}
         keys = []
 
-        for name, key_type, default in opts['keys']:
-            o[name] = default
-            keys.append([name, key_type])
+        for nm, key_type, default in opts['keys']:
+            o[nm] = default
+            keys.append([nm, key_type])
 
         name = opts['name']
-        # print(sys.modules)
-        # m = next(x for x in sys.modules if print(x) and x is name)
 
         i = '    '
         before_lines = [
@@ -121,7 +113,14 @@ class Module():
         # views = []
         # for name, sug, value in opts['views']:
         #     if sug in ['']
-        views = ['["{0}","{1}",{2}]'.format(*k) for k in opts['views']]
+
+        views = []
+        for nm, tp, value in opts['views']:
+            if tp == 'string':
+                views.append('["{0}","{1}","""{2}"""]'.format(nm, tp, value))
+            else:
+                views.append('["{0}","{1}",{2}]'.format(nm, tp, value))
+        # views = [.format(*k) for k in opts['views']]
 
         return_line = 'return data, [{0}]'.format(','.join(views))
 
@@ -145,15 +144,12 @@ class Module():
 
     @classmethod
     def load_from_file(cls, path):
-        print('hay')
         modules_clss = cls.get_all_modules()
         modules = []
         with open(path, 'rb') as handle:
             saved_modules = json.load(handle)
             for saved_hash in saved_modules:
-                # print([d.__name__ for d in modules_clss])
                 try:
-                    # print(modules.__name__*20+ 'dd'*12)
                     m_class = next(x for x in modules_clss if x.__name__ == saved_hash['class'])
                     # m = eval(m_class + '()')
                     m = m_class()
@@ -232,7 +228,6 @@ class Module():
             temp_indices = []
             for old_xy in indices:
                 new_xy_array = cls.get_neighbors_indices(old_xy[0], old_xy[1], x_max, y_max)
-                # print('new _arr', indices)
                 for xy in new_xy_array:
                     if xy not in indices and xy not in indices:
                         temp_indices.append(xy)

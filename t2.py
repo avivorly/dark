@@ -453,7 +453,6 @@ class App(QMainWindow):
         res['func'] = total
 
         for i, par_name in names.items():
-            # print([i,par_name])
             res[par_name] = [total.GetParameter(i), total.GetParError(i)]
         return res
 
@@ -703,8 +702,6 @@ class App(QMainWindow):
                 self.maskMat = self.file_matrix(0, self.dic + '/mask_' + c + '.fits')
 
                 self.combCN.plot2([self.procMat, self.combMat, self.maskMat], float(self.getSet('gamma')))
-                print(self.maskskip.isChecked())
-                print(self.sdmask.isChecked())
                 if not self.sdmask.isChecked():
                     maskSum = 0.0
                     maskMone = 0
@@ -738,15 +735,12 @@ class App(QMainWindow):
                                     maskSum += v
                                     maskMone += 1
                     args = [maskSum / maskMone, np.std(maskarr), maskMone, stamSum / stamMone, np.std(stamarr), stamMone]
-                    print(args)
                     args = map(lambda f: str(round(f, roundTo)), args)
                     arr = []
                     for a in args:
                         arr.append(a)
-                    print(arr)
                     self.maskRatio.setText("mask: {0} SD: {1} count: {2} | normal: {3} SD: {4} count: {5}".format(*list(arr)))
 
-            # print(datetime.datetime.now() - self.s)
             # TODO add min max to mask
             data = self.flat(self.combMat)
         elif not data_force:

@@ -55,7 +55,6 @@ class Dist(Module):
 
             ranges = np.linspace(np.min(keys), np.max(keys), self.o['bins'])
             # ranges = np.linspace(-200, 400, self.o['bins'])
-            print(ranges)
             xs = []
             ys = []
             l = len(ranges)

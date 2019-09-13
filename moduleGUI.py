@@ -1,34 +1,9 @@
-from PyQt5.QtWidgets import QPushButton
-from PyQt5.QtCore import Qt, QSize
-from PyQt5.QtGui import QIcon, QPalette
-import sys
 from functools import partial
-from PyQt5.QtWidgets import QPushButton, QWidget, QApplication, QMainWindow, QHBoxLayout,QVBoxLayout, QGridLayout, QDialog, QFrame
-from PyQt5.QtCore import Qt, QSize
-from PyQt5.QtGui import QIcon
-import sys
-# from modal import InvoiceModal
-from PyQt5.QtGui import QPainter, QBrush, QPen
-import PyQt5.QtCore
 from PyQt5.QtCore import Qt
-from PyQt5 import QtGui
-
-from PyQt5.QtWidgets import QApplication, QMainWindow
-
-from PyQt5.QtWidgets import QFileDialog
-
-# exec(open("/home/aviv/avivsroot/lib/aviv_root.py").read())
-from PyQt5.QtWidgets import (QMessageBox)
-from PyQt5.QtWidgets import QMainWindow, QAction
-from PyQt5.QtWidgets import (QApplication, QCheckBox,
-                             QGridLayout, QGroupBox, QHBoxLayout, QLabel, QLineEdit,
-                             QPushButton, QSizePolicy,
-                             QSpinBox, QTableWidget,
-                             QVBoxLayout, QWidget)
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
+from PyQt5.QtWidgets import QGroupBox, QHBoxLayout, QLabel,  QPushButton, QVBoxLayout
 from ModuleInputForm import ModuleInputForm
 import inspect
+
 class ModuleGui(QGroupBox):
     def __init__(self, parent, module):
         self.sand = parent
@@ -46,18 +21,11 @@ class ModuleGui(QGroupBox):
     def initUI(self):
         mainlay = QHBoxLayout()
         mainlay.setContentsMargins(0, 0, 0, 0)
-        # self.setContentsMargins(0, 0, 0, 0)
 
         mainlay.setSpacing(0)
-        # mainlay.setMargin(0)
         self.setLayout(mainlay)
         self.right = QPushButton()
         self.left = QPushButton()
-        # self.right.setStyleSheet("background-color:rgb(239,193,158);")
-        # self.left.setStyleSheet("background-color:rgb(116,138,123);")
-
-
-
 
         for q in [self.left,self.right]:
             q.setFixedWidth(15)
@@ -84,7 +52,7 @@ class ModuleGui(QGroupBox):
         # color = a.palette().color(QPalette.Window)
         # color.setRed(100)
 
-        # print(color.getRgbF())
+        # (color.getRgbF())
 
         self.resize(20, 20)
         self.show()
@@ -130,7 +98,7 @@ class ModuleGui(QGroupBox):
             self.__mouseMovePos = globalPos
 
     def mouseDoubleClickEvent(self, event):
-        self.sand.update_starter(self)
+        self.sand.force_starter(self)
 
 
     def set_sarter(self, flag):
@@ -142,14 +110,9 @@ class ModuleGui(QGroupBox):
             item.setStyleSheet("background-color:{0};".format(color))
 
     def open_form(self):
-        # print(table.text())
-        modul_form = ModuleInputForm(self, self.module.keys, self.sand)
-        res = modul_form.show()
-        # if res == QDialog.Accepted:
-        #     print("ok")
-        # else:
-        #     # table.deleteLater()
-        #     print("ABORT!")
+        modul_form = ModuleInputForm(self.sand, self)
+        modul_form.show()
+
     def center(self):
         x1 = self.x()
         x2 = x1 + self.width()
