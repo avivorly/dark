@@ -91,7 +91,7 @@ class AfelApp(QMainWindow):
         starter = self.sandbox.starter
         if starter:
             extras = starter.module.run()
-            self.result_box = ResultView(extras, self)
+            self.result_box = ResultView(self, extras)
             if self.modes['outer_window']:
                 w = QMainWindow(self)
                 w.setCentralWidget(self.result_box)

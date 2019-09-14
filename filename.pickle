@@ -1,1 +1,1 @@
-[{"class": "One", "o": {}, "next_node": null, "gui_props": [273, 212]}]
+[{"class": "OpenFile", "o": {"path": "may23/proc_skp_2hr_vddOFF_14_12.fits"}, "next_node": 2, "gui_props": [78, 169]}, {"class": "Viewer", "o": {}, "next_node": null, "gui_props": [366, 231]}, {"class": "FileMask", "o": {}, "next_node": null, "gui_props": [127, 374]}]

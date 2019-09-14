@@ -1,1 +1,0 @@
-{"name": "newModule", "keys": [], "views": {"stam": {"type": "string", "value": "456"}, "simple output": [{"str": {"type": "string", "value": "789"}}, {"str": {"type": "string", "value": ""}}], "graph": [{"title": {"type": "string", "value": "123"}}, {"title": {"type": "string", "value": "789"}}]}, "code": "123"}

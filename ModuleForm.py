@@ -49,9 +49,8 @@ class ModuleForm(QMainWindow):
         Input(self, 'texteditor', 'code')
 
         h = {
-            'stam': 'string',
-            'simple output': {
-                'str': ['string', 'code']
+            'string': {
+                'string': ['string', 'code']
             },
             'graph':
                 {
@@ -62,7 +61,13 @@ class ModuleForm(QMainWindow):
                     'hist': {
                         'xs': 'string'
                     }
-                }}
+                },
+            'image':
+                {
+                    'images': ['string', 'code']
+                }
+
+        }
 
 
         self.g = InputGroup(self, 'views', h, opts={'o': self.o['views']})

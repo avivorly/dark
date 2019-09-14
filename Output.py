@@ -12,33 +12,10 @@ from PyQt5.QtWidgets import (
                              QSpinBox, QTableWidget,
                              QVBoxLayout, QWidget)
 
-class OutputGraph(FigureCanvas):
-    def __init__(self,parent, opts={}):
-        self.opts = opts
-
-        for plot in opts['plots']:
-            fig = Figure(figsize=(9, 4), dpi=50)
-            FigureCanvas.__init__(self, fig)
-            self.setParent(parent)
-            FigureCanvas.setSizePolicy(self, \
-                                       QSizePolicy.Expanding,
-                                       QSizePolicy.Expanding)
-            FigureCanvas.updateGeometry(self)
-            ax = self.figure.add_subplot(111)
-            ax.plot(plot['xs'], plot['ys'], ro)
-            self.draw()
-
-
-
-
-
-
-
-
-
-
-
-
 
         # self.ax.set_xlim(vmin, vmax)
+
+
+
+
 

@@ -52,7 +52,6 @@ class InputGroup(AWidget):
             # for hhh in o[nm]:
             #     for k,v in hhh.items():
                 for oo in o[nm]:
-                    print(oo)
                     self.add_group(nm, h[nm], margin + 10, opts={'o': oo})
                 #         1
                 #         self.add_group(nm, h[nm], margin + 10, opts={'o':v})

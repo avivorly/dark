@@ -31,6 +31,7 @@ class Module():
 
         if self.next_node:
             self.next_node.data = data
+            self.next_node.last_node = self
             next_extras = self.next_node.run()
             extras += next_extras
         return extras
@@ -101,6 +102,7 @@ class Module():
         i = '    '
         before_lines = [
             'from modules.Module import Module',
+            'import numpy as np',
             'import copy',
             'class {0}(Module):'.format(opts['name']),
             i + 'def process(self):',
