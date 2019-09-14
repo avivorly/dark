@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="828e1c7e-0f93-4524-89dc-4a3bbbfd08c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AWidget.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InputGraph.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/Output.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input.py" beforeDir="false" afterPath="$PROJECT_DIR$/Input.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModuleBtn.py" beforeDir="false" afterPath="$PROJECT_DIR$/ModuleBtn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/InputGraph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModuleForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/ModuleForm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ResultView.py" beforeDir="false" afterPath="$PROJECT_DIR$/ResultView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filename.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/filename.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Module.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Module.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ModuleForm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+            <state relative-caret-position="496">
+              <caret line="60" column="3" lean-forward="true" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -35,49 +27,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/Module.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Input.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="18" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/InputGraph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="730">
-              <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+            <state relative-caret-position="537">
+              <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#1#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,10 +51,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>general_input'</find>
-      <find>ModuleInputForm</find>
-      <find>gui_modul</find>
-      <find>self.lay</find>
       <find>clicked</find>
       <find>connect</find>
       <find>iggered.connect(partial(self.updat</find>
@@ -117,14 +69,18 @@
       <find>allowed</find>
       <find>stirng</find>
       <find>'s'</find>
-      <find>print(</find>
       <find>force_name</find>
-      <find>print</find>
       <find>str</find>
       <find>gsub</find>
       <find>type</find>
       <find>dump</find>
       <find>[]</find>
+      <find>o['code']</find>
+      <find>dic</find>
+      <find>print(</find>
+      <find>InputGroup</find>
+      <find>print</find>
+      <find>module name</find>
     </findStrings>
     <replaceStrings>
       <replace>libPyROOT</replace>
@@ -204,12 +160,12 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/ModuleInputForm.py" />
         <option value="$PROJECT_DIR$/AWidget.py" />
-        <option value="$PROJECT_DIR$/Input.py" />
-        <option value="$PROJECT_DIR$/InputGraph.py" />
         <option value="$PROJECT_DIR$/m/newModule" />
-        <option value="$PROJECT_DIR$/ResultView.py" />
-        <option value="$PROJECT_DIR$/ModuleForm.py" />
+        <option value="$PROJECT_DIR$/Input.py" />
         <option value="$PROJECT_DIR$/modules/Module.py" />
+        <option value="$PROJECT_DIR$/ResultView.py" />
+        <option value="$PROJECT_DIR$/InputGraph.py" />
+        <option value="$PROJECT_DIR$/ModuleForm.py" />
       </list>
     </option>
   </component>
@@ -520,7 +476,7 @@
       <workItem from="1568202715050" duration="3000" />
       <workItem from="1568211248739" duration="8995000" />
       <workItem from="1568367930923" duration="20047000" />
-      <workItem from="1568457996351" duration="17085000" />
+      <workItem from="1568457996351" duration="19529000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1568283124720</created>
@@ -550,11 +506,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568374875921</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="views can saved by module editor but cant yet be loaded to it">
+      <created>1568470683849</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568470683849</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="424422000" />
+    <option name="totallyTimeSpent" value="426866000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -568,7 +531,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="3373" height="1415" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19717464" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19717464" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -582,7 +545,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32970452" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51517886" side_tool="true" weight="0.23950233" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47971144" weight="0.24727838" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.47971144" visible="true" weight="0.24727838" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.48482117" weight="0.23950233" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -666,7 +629,8 @@
     <MESSAGE value="works" />
     <MESSAGE value="SEMI WORKS&#10;AFTER THAT COMMIT I WILL SELF REVIEW THE CODE" />
     <MESSAGE value="Works nice&#10;without output grapshics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Works nice&#10;without output grapshics" />
+    <MESSAGE value="views can saved by module editor but cant yet be loaded to it" />
+    <option name="LAST_COMMIT_MESSAGE" value="views can saved by module editor but cant yet be loaded to it" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dark$fitt.coverage" NAME="fitt Coverage Results" MODIFIED="1563218258423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -939,13 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m/a">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ModuleInputForm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -953,27 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3.6/json/decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="342" column="18" lean-forward="true" selection-start-line="342" selection-start-column="18" selection-end-line="342" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AWidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="17" column="18" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Input.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -994,16 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ResultView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1014,37 +944,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/InputGraph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/newModule">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="116" selection-start-column="116" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m/temp/temporaryModules">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1068,12 +971,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/m/a">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/lib/python3.6/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="356" selection-start-line="356" selection-end-line="356" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="142" selection-start-line="142" selection-end-line="143" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/newModule">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="58" lean-forward="true" selection-start-column="58" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResultView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="764">
+          <caret line="81" selection-start-line="81" selection-end-line="99" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ModuleForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="496">
+          <caret line="60" column="3" lean-forward="true" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InputGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+          <folding>
+            <element signature="e#1#24#0" expanded="true" />
           </folding>
         </state>
       </provider>

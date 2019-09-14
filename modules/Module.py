@@ -111,13 +111,10 @@ class Module():
             '   data = self.data.copy() if getattr(self.data, "copy", False) else copy.deepcopy(self.data)',
             'o = copy.deepcopy(self.o)'
         ]
-        print('print')
 
         views = json.dumps(cls.h_t_s(opts['views']))
-        print(views)
         views = views.replace('"{0}'.format(cls.r), '')
         views = views.replace('{0}"'.format(cls.r), '')
-        print(views)
 
 
         # for nm, tp, value in opts['views']:
@@ -137,7 +134,6 @@ class Module():
         p = 'm.temp.{0}'.format(name)
         if p in sys.modules:
             del sys.modules[p]
-        print('file is ready')
         m = getattr(importlib.import_module(p), name)
 
         m.o = o

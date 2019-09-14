@@ -79,24 +79,24 @@ class ResultView(QWidget):
         #
         #         row += 1
 
-        h = {
-            'simple output': {
-                'str':['python']
-            },
-            'graph':
-                {
-                'title': 'string',
-                'func': {
-                    'xy': 'code',
-                    'xlim': ['integer', 'code']
-                },
-                'hist': {
-                    'xs': 'string'
-                }
-        } }
+        # h = {
+        #     'simple output': {
+        #         'str':['python']
+        #     },
+        #     'graph':
+        #         {
+        #         'title': 'string',
+        #         'func': {
+        #             'xy': 'code',
+        #             'xlim': ['integer', 'code']
+        #         },
+        #         'hist': {
+        #             'xs': 'string'
+        #         }
+        # } }
+        #
 
-        InputGroup(self, 'w', h)
-
+        #
 
 
 

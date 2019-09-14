@@ -20,6 +20,7 @@ class ModuleForm(QMainWindow):
 
         self.o['module name'] = dic['name'] or 'newModule'
         self.o['code'] = dic['code'] or ''
+        self.o['views'] = {} or dic['views']
 
         inputs_group = QGroupBox(self)
         inputs_lay = QVBoxLayout()
@@ -46,10 +47,10 @@ class ModuleForm(QMainWindow):
             Input(self, 'group', None, {'add_delete': True, 'o': self.input_o, 'group_type':'input_definer', 'input_definer_values': input_i})
 
 
-
         Input(self, 'texteditor', 'code')
 
         h = {
+            'stam': 'string',
             'simple output': {
                 'str': ['string', 'code']
             },
@@ -78,16 +79,9 @@ class ModuleForm(QMainWindow):
               {'add_delete': True, 'o': self.views_o, 'general_name': 'view', 'group_type': 'view_definer'})
 
     def save(self):
-        print(self.o)
         name = self.o['module name']
         keys = [list(v.values()) for _, v in self.input_o.items()]
         with open(self.folder + name, 'w') as outfile:
             json.dump({'name': name, 'keys': keys, 'views': self.o['views'], 'code': self.o['code']}, outfile)
         self.parent().load_from_path()
         self.parent().parent().parent().reload()
-
-
-
-
-
-
