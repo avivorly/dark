@@ -13,6 +13,8 @@ import importlib
 import sys, pkgutil
 
 class Module():
+    r = '$$$'
+
     def __init__(self):
         super().__init__()
         if not hasattr(self,'o'):
@@ -109,20 +111,22 @@ class Module():
             '   data = self.data.copy() if getattr(self.data, "copy", False) else copy.deepcopy(self.data)',
             'o = copy.deepcopy(self.o)'
         ]
+        print('print')
 
-        # views = []
-        # for name, sug, value in opts['views']:
-        #     if sug in ['']
+        views = json.dumps(cls.h_t_s(opts['views']))
+        print(views)
+        views = views.replace('"{0}'.format(cls.r), '')
+        views = views.replace('{0}"'.format(cls.r), '')
+        print(views)
 
-        views = []
-        for nm, tp, value in opts['views']:
-            if tp == 'string':
-                views.append('["{0}","{1}","""{2}"""]'.format(nm, tp, value))
-            else:
-                views.append('["{0}","{1}",{2}]'.format(nm, tp, value))
-        # views = [.format(*k) for k in opts['views']]
 
-        return_line = 'return data, [{0}]'.format(','.join(views))
+        # for nm, tp, value in opts['views']:
+        #     if tp == 'string':
+        #         views.append('["{0}","{1}","""{2}"""]'.format(nm, tp, value))
+        #     else:
+        #         views.append('["{0}","{1}",{2}]'.format(nm, tp, value))
+
+        return_line = 'return data, {0}'.format(views)
 
 
         lines = before_lines + [i * 2 + l for l in init_lines + opts['code'].split('\n') + [return_line]]
@@ -133,7 +137,7 @@ class Module():
         p = 'm.temp.{0}'.format(name)
         if p in sys.modules:
             del sys.modules[p]
-
+        print('file is ready')
         m = getattr(importlib.import_module(p), name)
 
         m.o = o
@@ -141,6 +145,23 @@ class Module():
 
 
         return m
+
+    @classmethod
+    def h_t_s(cls, h):
+
+        for k,v in h.items():
+            if type(v) == dict and 'value' in v:
+                name = k
+                value = v['value']
+                tp = v['type']
+                sb = '"""'
+                if tp == 'code':
+                    v['value'] = cls.r + value + cls.r
+            else:
+                cls.h_t_s(v)
+        return h
+
+
 
     @classmethod
     def load_from_file(cls, path):

@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QMainWindow, QGroupBox ,QPushButton, QWidget, QVBoxL
 from Input import Input
 import json
 from collections import defaultdict
-
+from InputGraph import InputGroup
 class ModuleForm(QMainWindow):
     def __init__(self, parent, dic = defaultdict(lambda: {}),folder = ''):
         self.folder = folder
@@ -17,7 +17,6 @@ class ModuleForm(QMainWindow):
 
         self.o = {}
         self.input_o = {}
-        self.views_o = {}
 
         self.o['module name'] = dic['name'] or 'newModule'
         self.o['code'] = dic['code'] or ''
@@ -37,7 +36,7 @@ class ModuleForm(QMainWindow):
         add_view_btn = QPushButton('add view')
         add_view_btn.clicked.connect(self.add_view)
         add_view_btn.setIcon(QtGui.QIcon('assets/icons/view.png'))
-        self.lay.addWidget(add_view_btn)
+        # self.lay.addWidget(add_view_btn)
 
         save_btn = QPushButton('save')
         save_btn.clicked.connect(self.save)
@@ -46,10 +45,28 @@ class ModuleForm(QMainWindow):
         for input_i in dic['keys']:
             Input(self, 'group', None, {'add_delete': True, 'o': self.input_o, 'group_type':'input_definer', 'input_definer_values': input_i})
 
-        for views_o in dic['views']:
-            Input(self, 'group', None, {'add_delete': True, 'o': self.views_o, 'general_name': 'view', 'group_type':'view_definer', 'input_definer_values': views_o})
+
 
         Input(self, 'texteditor', 'code')
+
+        h = {
+            'simple output': {
+                'str': ['string', 'code']
+            },
+            'graph':
+                {
+                    'title': 'string',
+                    'func': {
+                        'xy': 'code',
+                        'xlim': ['integer', 'code']
+                    },
+                    'hist': {
+                        'xs': 'string'
+                    }
+                }}
+
+
+        self.g = InputGroup(self, 'views', h)
 
     def add_input(self):
         Input(self, 'group', None,
@@ -61,13 +78,11 @@ class ModuleForm(QMainWindow):
               {'add_delete': True, 'o': self.views_o, 'general_name': 'view', 'group_type': 'view_definer'})
 
     def save(self):
+        print(self.o)
         name = self.o['module name']
-        # keys = [[] for _,v in self.input_o.values()]
         keys = [list(v.values()) for _, v in self.input_o.items()]
-        views = [list(v.values()) for _, v in self.views_o.items()]
         with open(self.folder + name, 'w') as outfile:
-            json.dump({'name': name, 'keys': keys, 'views': views, 'code': self.o['code']}, outfile)
-
+            json.dump({'name': name, 'keys': keys, 'views': self.o['views'], 'code': self.o['code']}, outfile)
         self.parent().load_from_path()
         self.parent().parent().parent().reload()
 

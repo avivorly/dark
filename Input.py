@@ -1,68 +1,60 @@
 from PyQt5 import QtCore, QtGui
-
 from PyQt5.QtWidgets import (QPlainTextEdit, QFileDialog, QComboBox ,QApplication, QHBoxLayout, QLabel, QLineEdit,
                              QPushButton, QSpinBox, QWidget)
 # TODO  create also oo hash that saves all needed data, so [o,oo] contains all need to save an open anything
-class Input(QWidget):
-    def __init__(self, parent, type, name = '', opts = {}):
-        super().__init__(parent)
-        lay = QHBoxLayout()
-        self.setLayout(lay)
-        self.name = name
+from AWidget import AWidget
+
+
+class Input(AWidget):
+    def __init__(self, parent, tp, name = '', opts = {}):
+        super().__init__(parent, opts)
+
         self.opts = opts
-        self.type = type
+        self.tp = tp
         self.my_parent = parent
-        value = None
-        o = self.o = opts['o'] if 'o' in opts else self.parent().o
 
-        groups_types = {
-            'view_definer': ['title', 'type', 'view data'],
-            'input_definer': ['name', 'type', 'value']
-        }
+        value = name in self.o and self.o[name]
 
-        # 1 if True else 2
-        general_name = opts['general_name'] if 'general_name' in opts else 'input'
+        self.name = name = self.force_name(name)
+        if not ('hide name' in opts and opts['hide name']):
+            self.layout().addWidget(QLabel(name))
 
-        if not name:
-            i = 1
-            while '{0}: {1}'.format(general_name, i) in o:
-                i += 1
-            name = '{0}: {1}'.format(general_name, i)
-        else:
-            if name in o:
-                value = o[name]
-
-
-
-        if '!label' not in opts:
-            lay.addWidget(QLabel(name))
-        if type in ['string', 'python']:
+        if tp in ['string', 'python', 'code']:
             value = value or ''
             func_name, w = ['textChanged', QLineEdit(value)]
-        if type == 'texteditor':
+        if tp == 'texteditor':
             value = value or ''
             func_name, w = ['textChanged', QPlainTextEdit(value)]
-        if type == 'integer':
+        if tp == 'integer':
             value = value or 0
             func_name, w = ['valueChanged', QSpinBox()]
             w.setRange(-2147483648, 2147483647)
             w.setValue(value)
-        if type == 'file':
+        if tp == 'file':
             value = value or ''
             func_name, w = ['textChanged', QLineEdit(value)]
             b = QPushButton('Openn File')
-            lay.addWidget(b)
+            self.layout().addWidget(b)
             b.clicked.connect(lambda: w.setText(QFileDialog.getOpenFileName(self)[0]))
-        if type in ['select', 'type']:
-            if type == 'type':
-                opts['group'] = 'general input'
+        if tp in ['select', 'type']:
+            if tp == 'type':
+                opts['group'] = opts['group'] or 'general input'
+
             groups = {
                 'general input': ['string', 'python', 'file', 'integer']
             }
 
             func_name, w = ['currentTextChanged', QComboBox()]
-            for t in groups[opts['group']]:
-                w.addItem(t)
+
+            if 'allowed types' in opts:
+                at = opts['allowed types']
+                if type(at) == str:
+                    types = [at]
+                else:
+                    types = at
+            else:
+                types = groups[opts['group']]
+            [w.addItem(t) for t in types]
 
             value = value or w.itemText(0)
 
@@ -72,18 +64,30 @@ class Input(QWidget):
 
 
 
-        if type == 'group':
+        if tp == 'group':
+            groups_types = {
+                'view_definer': ['title', 'type', 'view data'],
+                'input_definer': ['name', 'type', 'value'],
+                'h': ['type', 'value']
+            }
+
+
+            hide_name = opts['group_type'] == 'h'
+
             titles = groups_types[opts['group_type']]
             w = False
             if not value:
                 value = {}
                 self.o[self.name] = value
             if 'input_definer_values' in opts:
+                idv = opts['input_definer_values']
 
-
-                for i in range(0, len(opts['input_definer_values'])):
-
-                    value[titles[i]] = opts['input_definer_values'][i]
+                if type(idv) == list:
+                    for i in range(0, len(idv)):
+                        value[titles[i]] = idv[i]
+                else:  # hash
+                    for k, v in idv.items():
+                        value[k] = v
 
 
 
@@ -91,23 +95,40 @@ class Input(QWidget):
             for i in range(0,len(titles)):
                 title = titles[i]
                 if title is 'type':
-                    save_until_next = Input(self, 'select', title, {'o': value, 'group': 'general input'})
+
+
+                    temp_opts = {'o': value, 'group': 'general input', 'hide name': hide_name}
+                    if 'allowed types' in opts:
+                        temp_opts['allowed types'] = opts['allowed types']
+
+                    save_until_next = Input(self, 'type', title,temp_opts)
+                    #
+                    # itle is 'type':
+                    # h = {'o': value, 'group': 'general input', 'hide name': hide_name}
+                    # if 'allowed types' in opts:
+                    #     alwtps = opts['allowed types']
+                    #
+                    # save_until_next = Input(self, 'select', title, )
+
+
                 else:
                     if not save_until_next:
                         input = Input(self, 'string', title, {'o': value})
                     else:
+
                         if 'type' in value:
                             generic_name = value['type']
                         else:
                             generic_name = 'string'
-                        input = Input(self, generic_name, title, {'o': value})
+
+                        input = Input(self, generic_name, title, {'o': value, 'hide name': hide_name})
 
 
                         save_until_next.opts['call_on_update'] = input.transform
                         save_until_next = None
         if w:
             self.w = w
-            lay.addWidget(w)
+            self.layout().addWidget(w)
             getattr(w, func_name).connect(self.update_dic)
 
             self.o[self.name] = value
@@ -115,20 +136,9 @@ class Input(QWidget):
             btn = QPushButton('clear')
             btn.clicked.connect(self.clear)
             btn.setIcon(QtGui.QIcon('assets/icons/delete.png'))
-            lay.addWidget(btn)
+            self.layout().addWidget(btn)
 
-        # self.update_dic(self.o)
-
-
-        self.show()
-        if hasattr(self.parent(), 'lay'):
-            l = self.parent().lay
-        else:
-            l = self.parent().layout()
-        if 'index' in opts:
-            l.insertWidget(opts['index'], self)
-        else:
-            l.addWidget(self)
+        self.present()
 
     def clipboardChanged(self):
         text = QApplication.clipboard().text()
@@ -141,7 +151,7 @@ class Input(QWidget):
         except:
             5
         self.o[self.name] = value
-        if self.type == 'text':
+        if self.tp == 'text':
             self.o[self.name] = '"""{0}"""'.format(value)
 
         if 'call_on_update' in self.opts:
@@ -165,5 +175,5 @@ class Input(QWidget):
         self.setStyleSheet("background-color:{0};".format('blue'))
 
 
-        new_input = Input(self.my_parent, input.value(), self.name, {'o': self.o, 'index': my_index})
+        new_input = Input(self.my_parent, input.value(), self.name, {'o': self.o, 'index': my_index, 'hide name': ('hide name' in self.opts and self.opts['hide name'])})
         input.opts['call_on_update'] = new_input.transform

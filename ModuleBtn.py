@@ -12,12 +12,13 @@ class ModuleBtn(QLabel):
             width: 50px;
             height: 20px;
             padding: 20px;
-            border: 3px black;
+            border: 1px black;
             border-style: outset;
             font-size: 13px;
             font-weight: bold;
             text-align: right;
-            background-color: gray;
+            background-color: #118ab2;
+            color: rgb(230,230,230);
             border-radius: 7;
         """)
 

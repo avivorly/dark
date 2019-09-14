@@ -7,26 +7,9 @@ from PyQt5.QtWidgets import (
                              QPushButton, QSizePolicy,
                              QSpinBox, QTableWidget,
                              QVBoxLayout, QWidget)
+from output.Output import OutputGraph
 
-class Graph(FigureCanvas):
-    def __init__(self,parent, xys, width=9, height=4, dpi=50):
-        xs = xys[0]
-        ys = xys[1]
-        fig = Figure(figsize=(width, height), dpi=dpi)
-        FigureCanvas.__init__(self, fig)
-        self.setParent(parent)
-
-        FigureCanvas.setSizePolicy(self, \
-                                   QSizePolicy.Expanding,
-                                   QSizePolicy.Expanding)
-        FigureCanvas.updateGeometry(self)
-
-        ax = self.figure.add_subplot(111)
-
-        # self.ax.set_xlim(vmin, vmax)
-
-        ax.plot(xs, ys, 'ro')
-        self.draw()
+from InputGraph import InputGroup
 
 
 class Image(FigureCanvas):
@@ -67,30 +50,58 @@ class ResultView(QWidget):
         self.toolbar = ResultToolbar(self)
         # toolbar.setIconSize(QSize(16, 16))
         main_lay.addWidget(self.toolbar)
+        self.o = {}
 
-        for extra in extras:
-            name = extra['name']
-            data = extra['data']
-            views = extra['views']
 
-            extra_box = QGroupBox(name)
 
-            lay = QGridLayout()
-            extra_box.setLayout(lay)
-            main_lay.addWidget(extra_box)
-            row = 0
-            for name, type, value in views:
-                lay.addWidget(QLabel(name), row, 0)
-                if type == 'string':
-                    lay.addWidget(QLabel(value), row, 1)
-                if type == 'number':
-                    lay.addWidget(QLabel(str(value)), row, 1)
-                if type == 'graph':
-                    lay.addWidget(Graph(extra_box ,value), row, 1)
-                if type == 'image':
-                    lay.addWidget(Image(extra_box, value), row, 1)
 
-                row += 1
+        # for extra in extras:
+        #     name = extra['name']
+        #     data = extra['data']
+        #     views = extra['views']
+        #
+        #     extra_box = QGroupBox(name)
+        #
+        #     lay = QGridLayout()
+        #     extra_box.setLayout(lay)
+        #     main_lay.addWidget(extra_box)
+        #     row = 0
+        #     for name, type, value in views:
+        #         lay.addWidget(QLabel(name), row, 0)
+        #         if type == 'string':
+        #             lay.addWidget(QLabel(value), row, 1)
+        #         if type == 'number':
+        #             lay.addWidget(QLabel(str(value)), row, 1)
+        #         if type == 'graph':
+        #             lay.addWidget(OutputGraph(extra_box ,value), row, 1)
+        #         if type == 'image':
+        #             lay.addWidget(Image(extra_box, value), row, 1)
+        #
+        #         row += 1
+
+        h = {
+            'simple output': {
+                'str':['python']
+            },
+            'graph':
+                {
+                'title': 'string',
+                'func': {
+                    'xy': 'code',
+                    'xlim': ['integer', 'code']
+                },
+                'hist': {
+                    'xs': 'string'
+                }
+        } }
+
+        InputGroup(self, 'w', h)
+
+
+
+
+
+
 
     def save_to_jpg(self):
         self.grab().save('results.jpg')

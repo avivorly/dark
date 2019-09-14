@@ -12,7 +12,11 @@ class AfelApp(QMainWindow):
     def __init__(self, parent=None):
         super(AfelApp, self).__init__(parent)
         self.setGeometry(10, 10, 1000, 1200)
-
+        # self.setStyleSheet("""
+        #
+        #             background-color: #fff;
+        #
+        #         """)
         # Flags
         self.modes = {
             'outer_window': True,
