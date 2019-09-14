@@ -26,7 +26,6 @@ class ModuleForm(QMainWindow):
         inputs_lay = QVBoxLayout()
         inputs_group.setLayout(inputs_lay)
 
-
         Input(self, 'string', 'module name')
 
         add_input_btn = QPushButton('add input')
@@ -59,7 +58,6 @@ class ModuleForm(QMainWindow):
                     'title': 'string',
                     'func': {
                         'xy': 'code',
-                        'xlim': ['integer', 'code']
                     },
                     'hist': {
                         'xs': 'string'
@@ -67,7 +65,7 @@ class ModuleForm(QMainWindow):
                 }}
 
 
-        self.g = InputGroup(self, 'views', h)
+        self.g = InputGroup(self, 'views', h, opts={'o': self.o['views']})
 
     def add_input(self):
         Input(self, 'group', None,

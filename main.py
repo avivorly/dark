@@ -14,7 +14,7 @@ class AfelApp(QMainWindow):
         self.setGeometry(10, 10, 1000, 1200)
         # self.setStyleSheet("""
         #
-        #             background-color: #fff;
+        #              background-color: rgb(100,100,100);
         #
         #         """)
         # Flags

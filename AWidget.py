@@ -1,7 +1,7 @@
 from PyQt5 import QtCore, QtGui
 
 from PyQt5.QtWidgets import (QVBoxLayout, QPlainTextEdit, QFileDialog, QComboBox ,QApplication, QHBoxLayout, QLabel, QLineEdit,
-                             QPushButton, QSpinBox, QWidget)
+                             QPushButton, QGroupBox, QSpinBox, QWidget)
 # TODO  create also oo hash that saves all needed data, so [o,oo] contains all need to save an open anything
 class AWidget(QWidget):
     def __init__(self, parent, opts = {}):

@@ -153,6 +153,9 @@ class Module():
                 sb = '"""'
                 if tp == 'code':
                     v['value'] = cls.r + value + cls.r
+            elif type(v) == list:
+                for hash in v:
+                    cls.h_t_s(hash)
             else:
                 cls.h_t_s(v)
         return h
