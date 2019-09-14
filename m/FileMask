@@ -1,0 +1,1 @@
+{"name": "FileMask", "keys": [], "views": {"image": [{"images": {"type": "code", "value": "[data, mask_matrix, self.data]"}}]}, "code": "path = self.last_node.o['path'].replace('proc', 'mask')\n\nmask_matrix = self.open_file(path)\ndata = self.mask(self.data, mask_matrix)"}

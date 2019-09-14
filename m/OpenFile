@@ -1,0 +1,1 @@
+{"name": "OpenFile", "keys": [["path", "file", "may23/proc_skp_2hr_vddOFF_14_12.fits"]], "views": {}, "code": "data = self.open_file(o['path'])"}
