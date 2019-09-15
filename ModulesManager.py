@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QListWidget, QMainWindow, QPushButton, QWidget, QHBo
 from ModuleForm import ModuleForm
 import os
 import json
-
+from collections import defaultdict
 class ModulesManager(QMainWindow):
     def __init__(self, parent):
         super().__init__(parent)
@@ -55,5 +55,5 @@ class ModulesManager(QMainWindow):
         m.show()
 
     def new_module(self):
-        m = ModuleForm(self, folder=self.dic + '/')
+        m = ModuleForm(self,dic= defaultdict(lambda: {}), folder=self.dic + '/')
         m.show()

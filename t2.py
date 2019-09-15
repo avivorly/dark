@@ -748,7 +748,6 @@ class App(QMainWindow):
         else:
             data = data_force
 
-
         dic = self.GausFit(data, o, manprs)
 
         mone = 0

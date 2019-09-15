@@ -2,6 +2,7 @@ from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
 from ResultToolbar import ResultToolbar
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from PyQt5.QtWidgets import (
     QLabel, QVBoxLayout, QWidget)
 from PyQt5.QtWidgets import (QApplication, QCheckBox,
@@ -53,6 +54,14 @@ class Graph(FigureCanvas):
         for f in opts['func']:
             xs, ys = f['xy']['value']
         ax.plot(xs, ys, 'ro')
+
+        for h in opts['hist']:
+            print('h:')
+            print(h['data']['value'])
+            # int(bins * ((vmax - vmin) / (fmax - fmin))), (vmin, vmax))
+            # -300, 300, 1000
+            ax.hist(list(h['data']['value']), 1000, (-300, 300))
+        self.figure.tight_layout()
         self.draw()
 class ResultView(QWidget):
 
@@ -86,9 +95,16 @@ class ResultView(QWidget):
                         lay.addWidget(g)
                         # print(h[tp])
                 if tp == 'image':
+
                     for h in arrs:
 
                         g = Image(self, h)
+                        print('h')
+                        print(h['add toolbar'])
+                        if h['add toolbar']['value']:
+
+                            t = NavigationToolbar(g, self)
+                            lay.addWidget(t)
                         lay.addWidget(g)
                         # print(h[tp])
 

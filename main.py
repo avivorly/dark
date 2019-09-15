@@ -1,6 +1,5 @@
 import sys
-
-from PyQt5.QtWidgets import QMainWindow, QApplication, QGroupBox, QHBoxLayout, QPushButton, QVBoxLayout, QWidget
+from PyQt5.QtWidgets import QMainWindow, QApplication, QGroupBox, QHBoxLayout, QPushButton, QVBoxLayout, QWidget, QSpinBox
 from AMsgBox import AMsgBox
 from modules.Module import Module
 from sandbox import SandBox

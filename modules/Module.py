@@ -4,7 +4,6 @@ import numpy as np
 from numpy import exp
 from astropy.io import fits
 from matplotlib.figure import Figure
-# import ROOT
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 # import pickle
@@ -100,12 +99,16 @@ class Module():
             keys.append([nm, key_type])
 
         name = opts['name']
-
+        if name in ['Fitter', 'CreateData']:
+            exl = ';from ROOT import TF1, gRandom, TH1F'
+        else:
+            exl = '\n'
         i = '    '
         before_lines = [
             'from modules.Module import Module',
             'import numpy as np',
-            'import copy',
+            'import copy' + exl,
+
             'class {0}(Module):'.format(opts['name']),
             i + 'def process(self):',
         ]

@@ -6,7 +6,6 @@ from collections import defaultdict
 from InputGraph import InputGroup
 class ModuleForm(QMainWindow):
     def __init__(self, parent, dic = defaultdict(lambda: {}),folder = ''):
-        print(dic)
         self.folder = folder
         super().__init__(parent)
         self.setMinimumSize(700, 400)
@@ -63,16 +62,16 @@ class ModuleForm(QMainWindow):
                         'xy': 'code',
                     },
                     'hist': {
-                        'xs': 'string'
+                        'data': 'code'
                     }
                 },
             'image':
                 {
-                    'images': ['string', 'code']
+                    'images': ['string', 'code'],
+                    'add toolbar': 'bool'
                 }
 
         }
-
 
         self.g = InputGroup(self, 'views', h, opts={'o': self.o['views']})
 

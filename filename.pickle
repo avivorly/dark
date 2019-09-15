@@ -1,1 +1,1 @@
-[{"class": "OpenFile", "o": {"path": "may23/proc_skp_2hr_vddOFF_14_12.fits"}, "next_node": 1, "gui_props": [142, 293]}, {"class": "Reducer", "o": {"top": 240, "bottom": 300, "right": 60, "left": 80}, "next_node": null, "gui_props": [286, 466]}]
+[{"class": "OpenFile", "o": {"path": "may23/proc_skp_2hr_vddOFF_14_12.fits"}, "next_node": 2, "gui_props": [172, 169]}, {"class": "Fitter", "o": {}, "next_node": null, "gui_props": [552, 239]}, {"class": "Reducer", "o": {"top": 240, "bottom": 300, "right": 60, "left": 80}, "next_node": 1, "gui_props": [201, 329]}]
