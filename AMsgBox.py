@@ -17,7 +17,7 @@ class AMsgBox(QWidget):
         super().__init__(parent)
         self.setStyleSheet("""
             border: 100px black;
-            border-: outset;
+           
             font-size: 22px;
             font-weight: bold;
             text-align: right;

@@ -1,1 +1,1 @@
-{"name": "OpenFile", "keys": [["path", "file", "may23/proc_skp_2hr_vddOFF_14_12.fits"]], "views": {"image": [{"images": {"type": "code", "value": "[data]"}}]}, "code": "1/0\ndata = self.open_file(o['path'])", "active": 2}
+{"name": "OpenFile", "keys": [["path", "file", "may23/proc_skp_2hr_vddOFF_14_12.fits"]], "views": {"image": [{"images": {"type": "code", "value": "[data]"}}]}, "code": "print(2)\ndata = self.open_file(o['path'])", "active": 2}

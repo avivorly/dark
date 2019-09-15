@@ -47,6 +47,7 @@ class SandBox(QGroupBox):
         return self.parent().parent().toolbar.file_path_input.text()
 
     def load_file_modules(self, path = None):
+        self.clear_sandbox(force=True)
         modules, ex = Module.load_from_file(path or self.file_path())
         for m in modules:
             self.add_module(m, xy = m.gui_props)
@@ -72,6 +73,8 @@ class SandBox(QGroupBox):
             for mg in self.gui_modules:
                 mg.setParent(None)
             self.gui_modules = []
+            self.starter = None
+
 
     def paintEvent(self, *args, **kwargs):
         qp = QPainter()
