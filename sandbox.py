@@ -47,7 +47,7 @@ class SandBox(QGroupBox):
         return self.parent().parent().toolbar.file_path_input.text()
 
     def load_file_modules(self, path = None):
-        modules = Module.load_from_file(path or self.file_path())
+        modules, ex = Module.load_from_file(path or self.file_path())
         for m in modules:
             self.add_module(m, xy = m.gui_props)
 

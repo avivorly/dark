@@ -11,7 +11,7 @@ from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as Navigatio
 import json
 import importlib
 import sys, pkgutil
-
+from AMsgBox import  AMsgBox
 class Module():
     r = '$$$'
 
@@ -65,7 +65,7 @@ class Module():
 
     @classmethod
     def get_all_modules(cls):
-        return cls.import_all_file_modules() + cls.import_all_modules_from_pickle()
+        return cls.import_all_modules_from_pickle()
 
 
     @classmethod
@@ -77,6 +77,7 @@ class Module():
     def import_all_modules_from_pickle(cls):
         arr = []
         path = 'm/'
+        es = []
         for m in os.listdir(path):
             if not os.path.isdir(path + m):
                 with open(path + m, 'r') as handle:
@@ -86,8 +87,8 @@ class Module():
                             arr.append(cls.create_module(b))
                     except Exception:
                         import traceback
-                        traceback.print_exc()
-        return arr
+                        es.append(traceback.format_exc())
+        return arr, es
 
     @classmethod
     def create_module(cls, opts):
@@ -166,8 +167,8 @@ class Module():
 
 
     @classmethod
-    def load_from_file(cls, path):
-        modules_clss = cls.get_all_modules()
+    def load_from_file(cls, path): # loads sandbox
+        modules_clss, es = cls.get_all_modules()
         modules = []
         with open(path, 'rb') as handle:
             saved_modules = json.load(handle)
@@ -183,14 +184,14 @@ class Module():
                     modules.append(m)
                 except Exception:
                     import traceback
-                    traceback.print_exc()
+                    es.append(traceback.format_exc())
 
         for m in modules:
             if m.next_node:
                 m.next_node = modules[m.next_node]
 
 
-        return modules
+        return modules, es
 
 
 

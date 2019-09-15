@@ -1,7 +1,7 @@
 import sys
 
 from PyQt5.QtWidgets import QMainWindow, QApplication, QGroupBox, QHBoxLayout, QPushButton, QVBoxLayout, QWidget
-
+from AMsgBox import AMsgBox
 from modules.Module import Module
 from sandbox import SandBox
 from ResultView import ResultView
@@ -65,10 +65,17 @@ class AfelApp(QMainWindow):
 
     def load_modules_btns(self):
         self.clear_modules_btns()
-
-        for btn in [ModuleBtn(m) for m in Module.get_all_modules()]:
+        all_modules, es = Module.get_all_modules()
+        for btn in [ModuleBtn(m) for m in all_modules]:
             self.btns_lay.insertWidget(0, btn)
             self.module_btns.append(btn)
+        self.pop_errors(es)
+
+    def pop_errors(self, es):
+        for e in es:
+            w = QMainWindow(self)
+            w.setCentralWidget(AMsgBox(self,e))
+            w.show()
 
     def clear_modules_btns(self):
         [b.setParent(None) for b in self.module_btns]
@@ -90,19 +97,24 @@ class AfelApp(QMainWindow):
         self.old_box = self.result_box
         starter = self.sandbox.starter
         if starter:
-            extras = starter.module.run()
-            self.result_box = ResultView(self, extras)
-            if self.modes['outer_window']:
-                w = QMainWindow(self)
-                w.setCentralWidget(self.result_box)
-                w.show()
-            else:
-                g = QGroupBox()
-                gl = QHBoxLayout()
-                g.setLayout(gl)
-                gl.addWidget(self.result_box)
-                self.result_box_group = g
-                self.layout().addWidget(g,5)
+            try:
+                extras = starter.module.run()
+                self.result_box = ResultView(self, extras)
+                if self.modes['outer_window']:
+                    w = QMainWindow(self)
+                    w.setCentralWidget(self.result_box)
+                    w.show()
+                else:
+                    g = QGroupBox()
+                    gl = QHBoxLayout()
+                    g.setLayout(gl)
+                    gl.addWidget(self.result_box)
+                    self.result_box_group = g
+                    self.layout().addWidget(g, 5)
+            except Exception:
+                import traceback
+                self.pop_errors([traceback.format_exc()])
+
 
         else:
             self.statusBar().showMessage('please define starter', 2000)
