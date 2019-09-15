@@ -6,7 +6,10 @@ from PyQt5.QtGui import QColor, QPainter, QTextFormat
 class QLineNumberArea(QWidget):
     def __init__(self, editor):
         super().__init__(editor)
+
         self.codeEditor = editor
+        self.setStyleSheet("color: white;")
+
 
     def sizeHint(self):
         return QSize(self.editor.lineNumberAreaWidth(), 0)
@@ -14,15 +17,16 @@ class QLineNumberArea(QWidget):
     def paintEvent(self, event):
         self.codeEditor.lineNumberAreaPaintEvent(event)
 
-
 class QCodeEditor(QPlainTextEdit):
     def __init__(self, parent=None):
         super().__init__(parent)
+
         self.lineNumberArea = QLineNumberArea(self)
         self.blockCountChanged.connect(self.updateLineNumberAreaWidth)
         self.updateRequest.connect(self.updateLineNumberArea)
         self.cursorPositionChanged.connect(self.highlightCurrentLine)
         self.updateLineNumberAreaWidth(0)
+
 
     def lineNumberAreaWidth(self):
         digits = 1
@@ -63,8 +67,10 @@ class QCodeEditor(QPlainTextEdit):
 
     def lineNumberAreaPaintEvent(self, event):
         painter = QPainter(self.lineNumberArea)
+        c = QColor()
+        c.setNamedColor('#afb2e0')
+        painter.fillRect(event.rect(), c)
 
-        painter.fillRect(event.rect(), Qt.lightGray)
 
         block = self.firstVisibleBlock()
         blockNumber = block.blockNumber()

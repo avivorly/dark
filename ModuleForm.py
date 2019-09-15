@@ -6,6 +6,7 @@ from collections import defaultdict
 from InputGraph import InputGroup
 class ModuleForm(QMainWindow):
     def __init__(self, parent, dic = defaultdict(lambda: {}),folder = ''):
+        print(dic)
         self.folder = folder
         super().__init__(parent)
         self.setMinimumSize(700, 400)
@@ -20,6 +21,8 @@ class ModuleForm(QMainWindow):
 
         self.o['module name'] = dic['name'] or 'newModule'
         self.o['code'] = dic['code'] or ''
+        self.o['active'] = dic['active']
+
         self.o['views'] = {} or dic['views']
 
         inputs_group = QGroupBox(self)
@@ -27,6 +30,7 @@ class ModuleForm(QMainWindow):
         inputs_group.setLayout(inputs_lay)
 
         Input(self, 'string', 'module name')
+        Input(self, 'bool', 'active')
 
         add_input_btn = QPushButton('add input')
         add_input_btn.clicked.connect(self.add_input)
@@ -85,6 +89,6 @@ class ModuleForm(QMainWindow):
         name = self.o['module name']
         keys = [list(v.values()) for _, v in self.input_o.items()]
         with open(self.folder + name, 'w') as outfile:
-            json.dump({'name': name, 'keys': keys, 'views': self.o['views'], 'code': self.o['code']}, outfile)
+            json.dump({'name': name, 'keys': keys, 'views': self.o['views'], 'code': self.o['code'], 'active': self.o['active']}, outfile)
         self.parent().load_from_path()
         self.parent().parent().parent().reload()

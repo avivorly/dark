@@ -1,8 +1,9 @@
 from PyQt5 import QtCore, QtGui
-from PyQt5.QtWidgets import (QPlainTextEdit, QFileDialog, QComboBox ,QApplication, QHBoxLayout, QLabel, QLineEdit,
+from PyQt5.QtWidgets import (QPlainTextEdit, QFileDialog, QComboBox ,QApplication, QHBoxLayout, QLabel, QLineEdit, QCheckBox,
                              QPushButton, QSpinBox, QWidget)
 # TODO  create also oo hash that saves all needed data, so [o,oo] contains all need to save an open anything
 from AWidget import AWidget
+from codeeditor import QCodeEditor
 
 
 class Input(AWidget):
@@ -24,12 +25,16 @@ class Input(AWidget):
             func_name, w = ['textChanged', QLineEdit(value)]
         if tp == 'texteditor':
             value = value or ''
-            func_name, w = ['textChanged', QPlainTextEdit(value)]
+            func_name, w = ['textChanged', QCodeEditor(value)]
         if tp == 'integer':
             value = value or 0
             func_name, w = ['valueChanged', QSpinBox()]
             w.setRange(-2147483648, 2147483647)
             w.setValue(value)
+        if tp == 'bool':
+            value = value or 0
+            func_name, w = ['stateChanged', QCheckBox()]
+            w.setChecked(value)
         if tp == 'file':
             value = value or ''
             func_name, w = ['textChanged', QLineEdit(value)]

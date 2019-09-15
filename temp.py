@@ -53,7 +53,7 @@ class MainWindow(QMainWindow):
         # self.setStatusBar(QStatusBar(self))
 
     def onMyToolBarButtonClick(self, s):
-        #p#rint("click", s)
+        print("click", s)
 app = QApplication(sys.argv)
 app.setStyle('Fusion')
 win = MainWindow()

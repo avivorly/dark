@@ -82,7 +82,8 @@ class Module():
                 with open(path + m, 'r') as handle:
                     b = json.load(handle)
                     try:
-                        arr.append(cls.create_module(b))
+                        if b['active']:
+                            arr.append(cls.create_module(b))
                     except Exception:
                         import traceback
                         traceback.print_exc()
