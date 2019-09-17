@@ -30,8 +30,9 @@ class SandBox(QGroupBox):
         for m in self.gui_modules:
             if m.right.on:
                 right_module_gui = m
-
-                if right_module_gui.module.next_node:
+                next_node = right_module_gui.module.next_node
+                if next_node:
+                    next_node.data = None
                     right_module_gui.module.next_node = None
                     right_module_gui.reset_on_of()
                     return

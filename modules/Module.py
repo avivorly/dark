@@ -84,7 +84,7 @@ class Module():
                     try:
                         if b['active']:
                             arr.append(cls.create_module(b))
-                    except Exception:
+                    except:
                         import traceback
                         es.append(traceback.format_exc())
         return arr, es
@@ -110,13 +110,19 @@ class Module():
             'import copy' + exl,
 
             'class {0}(Module):'.format(opts['name']),
-            i + 'def process(self):',
+            i + 'def process(self):'
+
+
         ]
+
+
 
         init_lines = [
             'if hasattr(self, "data"):'
             '   data = self.data.copy() if getattr(self.data, "copy", False) else copy.deepcopy(self.data)',
-            'o = copy.deepcopy(self.o)'
+            'o = copy.deepcopy(self.o)',
+            'for k,v in o.items():',
+            i + 'globals()[k] = v'
         ]
 
         views = json.dumps(cls.h_t_s(opts['views']))
@@ -185,7 +191,7 @@ class Module():
                         setattr(m, p, saved_hash[p])
 
                     modules.append(m)
-                except Exception:
+                except:
                     import traceback
                     es.append(traceback.format_exc())
 
@@ -220,6 +226,20 @@ class Module():
                 if mask[i][j] - 32 not in [0, 1, 2, 3]:
                     mat[i][j] = np.NAN
         return mat
+
+    @classmethod
+    def mask(cls, mat, mask):
+        mat = mat.copy()
+        a[a - 32 > 3] = np.nan
+        rowsLen = len(mat)
+        colsLen = len(mat[0])
+        for i in range(0, rowsLen):
+            for j in range(0, colsLen):
+                if mask[i][j] - 32 not in [0, 1, 2, 3]:
+                    mat[i][j] = np.NAN
+        return mat
+
+
 
     @classmethod
     def rows_of(cls, mat):

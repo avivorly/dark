@@ -1,7 +1,9 @@
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtWidgets import (QPlainTextEdit, QFileDialog, QComboBox ,QApplication, QHBoxLayout, QLabel, QLineEdit, QCheckBox,
                              QPushButton, QSpinBox, QWidget)
+
 # TODO  create also oo hash that saves all needed data, so [o,oo] contains all need to save an open anything
+
 from AWidget import AWidget
 from codeeditor import QCodeEditor
 
@@ -12,13 +14,13 @@ class Input(AWidget):
 
         self.opts = opts
         self.tp = tp
-        self.my_parent = parent
+        self.my_parent = parent # try self.parent()
 
         value = name in self.o and self.o[name]
 
-        self.name = name = self.force_name(name)
+        self.name = self.force_name(name)
         if not ('hide name' in opts and opts['hide name']):
-            self.layout().addWidget(QLabel(name))
+            self.layout().addWidget(QLabel(self.name))
 
         if tp in ['string', 'python', 'code']:
             value = value or ''
@@ -29,7 +31,7 @@ class Input(AWidget):
         if tp == 'integer':
             value = value or 0
             func_name, w = ['valueChanged', QSpinBox()]
-            w.setRange(-2147483648, 2147483647)
+            w.setRange(-2147483648, 2147483647) # TODO add expression for max value
             w.setValue(value)
         if tp == 'bool':
             value = value or 0

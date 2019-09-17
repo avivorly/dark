@@ -1,0 +1,1 @@
+{"name": "Box", "keys": [["max_v", "integer", 1000], ["box_len", "integer", 5]], "views": {}, "code": "# data[100,100] = 10000\nfor i, j in np.argwhere(data > max_v):\n    data[max(0, i - box_len):i + box_len, max(0, j - box_len): j + box_len] = np.nan\n", "active": 2}

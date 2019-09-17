@@ -6,6 +6,7 @@ from sandbox import SandBox
 from ResultView import ResultView
 from ModuleBtn import ModuleBtn
 from toolbar import ToolBar
+from traceback import format_exc
 
 class AfelApp(QMainWindow):
     def __init__(self, parent=None):
@@ -64,20 +65,20 @@ class AfelApp(QMainWindow):
 
     def load_modules_btns(self):
         self.clear_modules_btns()
-        all_modules, es = Module.get_all_modules()
+        all_modules, errors = Module.get_all_modules()
         for btn in [ModuleBtn(m) for m in all_modules]:
             self.btns_lay.insertWidget(0, btn)
             self.module_btns.append(btn)
-        self.pop_errors(es)
+        self.pop_errors(errors)
 
-    def pop_errors(self, es):
-        for e in es:
+    def pop_errors(self, errors):
+        for e in errors:
             w = QMainWindow(self)
             w.setCentralWidget(AMsgBox(self,e))
             w.show()
 
     def clear_modules_btns(self):
-        [b.setParent(None) for b in self.module_btns]
+        [b.deleteLater() for b in self.module_btns]
         self.module_btns = []
 
     def reload(self):  # reload all - sandbox and modules btn
@@ -90,7 +91,7 @@ class AfelApp(QMainWindow):
         self.sandbox.load_file_modules(temp_path)
 
     def start_process(self):
-        if self.result_box_group:  # group to include the results window when not poped
+        if self.result_box_group:  # Qgroup to include the results window when not poped
             self.result_box_group.deleteLater()  # improve memory
             self.result_box_group = None
         self.old_box = self.result_box
@@ -110,9 +111,8 @@ class AfelApp(QMainWindow):
                     gl.addWidget(self.result_box)
                     self.result_box_group = g
                     self.layout().addWidget(g, 5)
-            except Exception:
-                import traceback
-                self.pop_errors([traceback.format_exc()])
+            except:
+                self.pop_errors([format_exc()])
 
 
         else:
