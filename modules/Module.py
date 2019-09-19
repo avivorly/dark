@@ -18,29 +18,34 @@ class Module():
         super().__init__()
         if not hasattr(self,'o'):
             self.o = {}
-        self.next_node = None
+        self.next_nodes = []
 
     def run(self):
         data, views = self.process()
-        extras = [{
-            'name': self.__class__.__name__,
-            'data': data,
-            'views': views
-        }]
 
-        if self.next_node:
-            self.next_node.data = data
-            self.next_node.last_node = self
-            next_extras = self.next_node.run()
-            extras += next_extras
-        return extras
+        module_output = {
+            'name': self.__class__.__name__,
+            'data': [],
+            'views': views
+        }
+
+        if self.next_nodes:
+            extras_arr = []
+            for next_node in self.next_nodes:
+                next_node.data = data
+                next_module_output = next_node.run()
+                extras_arr +=next_module_output
+            extras_arr = [[module_output] + a for a in extras_arr]
+            return extras_arr
+        else:
+            return [[module_output]]
 
     def dumpp(self):
         out = {
             'class': self.__class__.__name__,
             # 'data': self.data,
             'o': self.o,
-            'next_node': self.next_node,
+            'next_nodes': self.next_nodes,
             'gui_props': None
 
         }
@@ -54,9 +59,7 @@ class Module():
         arr = []
         for m in modules:
             t = m.dumpp()
-            if m.next_node:
-                t['next_node'] = modules.index(m.next_node)
-            # m.gui = None
+            t['next_nodes'] = [modules.index(n) for n in m.next_nodes]
             arr.append(t)
 
         with open(path, 'w') as handle:
@@ -178,26 +181,24 @@ class Module():
     @classmethod
     def load_from_file(cls, path): # loads sandbox
         modules_clss, es = cls.get_all_modules()
-        modules = []
-        with open(path, 'rb') as handle:
-            saved_modules = json.load(handle)
-            for saved_hash in saved_modules:
-                try:
+        try:
+            modules = []
+            with open(path, 'rb') as handle:
+                saved_modules = json.load(handle)
+                for saved_hash in saved_modules:
                     m_class = next(x for x in modules_clss if x.__name__ == saved_hash['class'])
-                    # m = eval(m_class + '()')
-                    m = m_class()
-                    # m = m_class.__init__()
-                    for p in ['o', 'gui_props', 'next_node']:
+                    m = m_class()  # __init__ the module
+                    for p in ['o', 'gui_props', 'next_nodes']:
                         setattr(m, p, saved_hash[p])
-
                     modules.append(m)
-                except:
-                    import traceback
-                    es.append(traceback.format_exc())
+                for m in modules:
+                    m.next_nodes = [modules[n] for n in m.next_nodes]
 
-        for m in modules:
-            if m.next_node:
-                m.next_node = modules[m.next_node]
+
+
+        except:
+            import traceback
+            es.append(traceback.format_exc())
 
 
         return modules, es

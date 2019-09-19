@@ -56,8 +56,6 @@ class Graph(FigureCanvas):
         ax.plot(xs, ys, 'ro')
 
         for h in opts['hist']:
-            print('h:')
-            print(h['data']['value'])
             # int(bins * ((vmax - vmin) / (fmax - fmin))), (vmin, vmax))
             # -300, 300, 1000
             ax.hist(list(h['data']['value']), 1000, (-300, 300))
@@ -78,35 +76,33 @@ class ResultView(QWidget):
         # toolbar.setIconSize(QSize(16, 16))
         main_lay.addWidget(self.toolbar)
         self.o = {}
+        print(extras)
+        for extra in extras:
 
+            for h in extra:
+                # print(h)
+                l = QLabel(h['name'])
+                lay.addWidget(l)
+                views = h['views']
+                for tp, arrs in views.items():
+                    if tp == 'string':
+                        for h in arrs:
+                            l = QLabel(str(h[tp]['value']))
+                            lay.addWidget(l)
+                    if tp == 'graph':
+                        for h in arrs:
+                            g = Graph(self, h)
+                            lay.addWidget(g)
+                    if tp == 'image':
 
-        for h in extras:
-            l = QLabel(h['name'])
-            lay.addWidget(l)
-            views = h['views']
-            for tp, arrs in views.items():
-                if tp == 'string':
-                    for h in arrs:
-                        l = QLabel(str(h[tp]['value']))
-                        lay.addWidget(l)
-                if tp == 'graph':
-                    for h in arrs:
-                        g = Graph(self, h)
-                        lay.addWidget(g)
-                        # print(h[tp])
-                if tp == 'image':
+                        for h in arrs:
 
-                    for h in arrs:
+                            g = Image(self, h)
+                            if h['add toolbar']['value']:
 
-                        g = Image(self, h)
-                        print('h')
-                        print(h['add toolbar'])
-                        if h['add toolbar']['value']:
-
-                            t = NavigationToolbar(g, self)
-                            lay.addWidget(t)
-                        lay.addWidget(g)
-                        # print(h[tp])
+                                t = NavigationToolbar(g, self)
+                                lay.addWidget(t)
+                            lay.addWidget(g)
 
 
 

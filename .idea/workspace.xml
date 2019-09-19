@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="828e1c7e-0f93-4524-89dc-4a3bbbfd08c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/m/Box" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/m/bliding" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input.py" beforeDir="false" afterPath="$PROJECT_DIR$/Input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ResultView.py" beforeDir="false" afterPath="$PROJECT_DIR$/ResultView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/filename.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/filename.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m/FileMask" beforeDir="false" afterPath="$PROJECT_DIR$/m/FileMask" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/m/OpenFile" beforeDir="false" afterPath="$PROJECT_DIR$/m/OpenFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m/Reducer" beforeDir="false" afterPath="$PROJECT_DIR$/m/Reducer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m/Viewer" beforeDir="false" afterPath="$PROJECT_DIR$/m/Viewer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/Module.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Module.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/sandbox.py" afterDir="false" />
@@ -26,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ModuleForm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="1170">
+              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -35,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sandbox.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="32" column="61" lean-forward="true" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+            <state relative-caret-position="2015">
+              <caret line="103" column="15" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -48,22 +45,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/m/temp/Reducer.py">
+        <entry file="file://$PROJECT_DIR$/ModuleBtn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="733">
+              <caret line="48" column="79" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="48" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/Module.py">
+        <entry file="file://$PROJECT_DIR$/temp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
-              <caret line="125" column="9" lean-forward="true" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
+            <state relative-caret-position="288">
+              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="44" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -72,34 +66,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/m/temp/OpenFile.py">
+        <entry file="file://$PROJECT_DIR$/moduleGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="170">
+              <caret line="81" column="51" lean-forward="true" selection-start-line="76" selection-start-column="3" selection-end-line="81" selection-end-column="51" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/temp.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/m/temp/BoxFile.py">
+        <entry file="file://$PROJECT_DIR$/filename.pickle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            <state>
+              <caret column="54" selection-start-column="54" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python3.6/json/decoder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5310">
+              <caret line="356" selection-start-line="356" selection-end-line="356" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/temp/OpenFile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m/temp/Viewer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -116,22 +128,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>3.1</find>
-      <find>3.2</find>
-      <find>lay2</find>
-      <find>QDoubleSpinBox</find>
-      <find>QAbstractSpinBox</find>
-      <find>setCentralWidget</find>
-      <find>self.dic</find>
-      <find>ROOT</find>
       <find>root</find>
       <find>tf1</find>
       <find>flatten</find>
       <find>exp</find>
       <find>plot(</find>
-      <find>print</find>
       <find>analizeFunc</find>
-      <find>print(</find>
       <find>toolba</find>
       <find>NavigationToolbar</find>
       <find>create_data</find>
@@ -146,6 +148,16 @@
       <find>mask</find>
       <find>process</find>
       <find>max(0, j - up_thic): j + up_thic]</find>
+      <find>extras</find>
+      <find>ResultView(</find>
+      <find>next_extras</find>
+      <find>extra</find>
+      <find>print</find>
+      <find>next_node</find>
+      <find>print(</find>
+      <find>views</find>
+      <find>self.__mouseMovePos</find>
+      <find>globalPos()</find>
     </findStrings>
     <replaceStrings>
       <replace>libPyROOT</replace>
@@ -215,24 +227,24 @@
         <option value="$PROJECT_DIR$/AMsgBox.py" />
         <option value="$PROJECT_DIR$/m/OpenFile" />
         <option value="$PROJECT_DIR$/toolbar.py" />
-        <option value="$PROJECT_DIR$/codeeditor.py" />
         <option value="$PROJECT_DIR$/AWidget.py" />
         <option value="$PROJECT_DIR$/moduleGUI.py" />
         <option value="$PROJECT_DIR$/ModulesManager.py" />
         <option value="$PROJECT_DIR$/t2.py" />
         <option value="$PROJECT_DIR$/modules/newModule.py" />
         <option value="$PROJECT_DIR$/ROOTFitter.py" />
-        <option value="$PROJECT_DIR$/m/temp/Fitter.py" />
         <option value="$PROJECT_DIR$/ModuleForm.py" />
-        <option value="$PROJECT_DIR$/ResultView.py" />
         <option value="$PROJECT_DIR$/ModuleBtn.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Input.py" />
-        <option value="$PROJECT_DIR$/sandbox.py" />
         <option value="$PROJECT_DIR$/m/temp/OpenFile.py" />
-        <option value="$PROJECT_DIR$/modules/Module.py" />
         <option value="$PROJECT_DIR$/m/temp/bliding.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/codeeditor.py" />
+        <option value="$PROJECT_DIR$/m/temp/Fitter.py" />
+        <option value="$PROJECT_DIR$/ResultView.py" />
+        <option value="$PROJECT_DIR$/modules/Module.py" />
         <option value="$PROJECT_DIR$/temp.py" />
+        <option value="$PROJECT_DIR$/sandbox.py" />
       </list>
     </option>
   </component>
@@ -247,6 +259,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,7 +297,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -552,7 +564,9 @@
       <workItem from="1568550887436" duration="18538000" />
       <workItem from="1568570097512" duration="11333000" />
       <workItem from="1568634018547" duration="2945000" />
-      <workItem from="1568749074959" duration="11019000" />
+      <workItem from="1568749074959" duration="11649000" />
+      <workItem from="1568844022411" duration="8476000" />
+      <workItem from="1568880463733" duration="5887000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1568283124720</created>
@@ -645,11 +659,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568582826749</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="new modules added">
+      <created>1568750070809</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1568750070809</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="485384000" />
+    <option name="totallyTimeSpent" value="500377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -661,10 +682,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="3354" y="319" width="2170" height="1059" extended-state="0" />
-    <editor active="true" />
+    <frame x="2627" y="25" width="3373" height="1415" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15772128" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1018936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -678,8 +698,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32970452" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51517886" side_tool="true" weight="0.23950233" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47971144" weight="0.30404353" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.48482117" visible="true" weight="0.7354839" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.47971144" visible="true" weight="0.30248833" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.48482117" weight="0.5311042" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -771,7 +791,8 @@
     <MESSAGE value="add errors" />
     <MESSAGE value="fix auto reload modules" />
     <MESSAGE value="ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="ready" />
+    <MESSAGE value="new modules added" />
+    <option name="LAST_COMMIT_MESSAGE" value="new modules added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dark$a.coverage" NAME="a Coverage Results" MODIFIED="1565415316336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -791,7 +812,7 @@
     <SUITE FILE_PATH="coverage/dark$modal.coverage" NAME="modal Coverage Results" MODIFIED="1565374839758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqt-dragndrop" />
     <SUITE FILE_PATH="coverage/dark$a1.coverage" NAME="a1 Coverage Results" MODIFIED="1563392304645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/may23" />
     <SUITE FILE_PATH="coverage/dark$ROOTFitter.coverage" NAME="ROOTFitter Coverage Results" MODIFIED="1568568313564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/dark$temp.coverage" NAME="temp Coverage Results" MODIFIED="1568742627375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dark$temp.coverage" NAME="temp Coverage Results" MODIFIED="1568882476575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dark$main.coverage" NAME="main Coverage Results" MODIFIED="1565885086026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyqt-dragndrop" />
     <SUITE FILE_PATH="coverage/dark$ttt.coverage" NAME="ttt Coverage Results" MODIFIED="1562530623827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dark$Creator.coverage" NAME="Creator Coverage Results" MODIFIED="1566896712777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
@@ -802,24 +823,6 @@
     <SUITE FILE_PATH="coverage/dark$t2.coverage" NAME="t2 Coverage Results" MODIFIED="1568562980924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Output.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/temp/a.py" />
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/matplotlib/axes/_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="2412" selection-start-line="2412" selection-end-line="2412" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/OpenFile.py" />
     <entry file="file://$PROJECT_DIR$/modules/Dist2.py" />
     <entry file="file://$PROJECT_DIR$/modules/FileMask.py" />
@@ -900,23 +903,6 @@
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codeeditor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-2066100795/PyQt5/QtWidgets/QWidget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13560">
-          <caret line="906" column="8" selection-start-line="906" selection-start-column="8" selection-end-line="906" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1021,23 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moduleGUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="83" column="19" selection-start-line="75" selection-end-line="97" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ModuleBtn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="32" column="52" lean-forward="true" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/m/OpenFile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1048,26 +1017,6 @@
     <entry file="file:///usr/lib/python3.6/traceback.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5265" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResultView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/InputGraph.py">
@@ -1096,56 +1045,6 @@
           <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="32" column="61" lean-forward="true" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/temp/Reducer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ModuleForm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/m/temp/OpenFile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="125" column="9" lean-forward="true" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1186,20 +1085,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/m/temp/BoxFile.py">
+    <entry file="file://$PROJECT_DIR$/m/temp/Reducer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="30">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/m/temp/BoxFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeeditor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="14" selection-start-line="14" selection-end-line="18" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResultView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ModuleForm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filename.pickle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5310">
+          <caret line="356" selection-start-line="356" selection-end-line="356" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/temp/OpenFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/m/temp/Viewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moduleGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="81" column="51" lean-forward="true" selection-start-line="76" selection-start-column="3" selection-end-line="81" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-2066100795/PyQt5/QtWidgets/QWidget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="547" column="8" selection-start-line="547" selection-start-column="8" selection-end-line="547" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/temp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="288">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ModuleBtn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="733">
+          <caret line="48" column="79" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="48" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2015">
+          <caret line="103" column="15" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

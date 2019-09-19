@@ -1,1 +1,1 @@
-{"name": "Viewer", "keys": [], "views": {"image": [{"images": {"type": "code", "value": "[self.data]"}, "add toolbar": {"type": "bool", "value": 2}}]}, "code": "", "active": 2}
+{"name": "Viewer", "keys": [], "views": {"image": [{"images": {"type": "code", "value": "[self.data]"}, "add toolbar": {"type": "bool", "value": 2}}]}, "code": "print('v')", "active": 2}
