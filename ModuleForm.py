@@ -1,11 +1,13 @@
 from PyQt5 import QtGui
-from PyQt5.QtWidgets import QMainWindow, QGroupBox ,QPushButton, QWidget, QVBoxLayout
+from PyQt5.QtWidgets import QMainWindow, QGroupBox, QPushButton, QWidget, QVBoxLayout
 from Input import Input
 import json
 from collections import defaultdict
 from InputGraph import InputGroup
+
+
 class ModuleForm(QMainWindow):
-    def __init__(self, parent, dic = defaultdict(lambda: {}),folder = ''):
+    def __init__(self, parent, dic=defaultdict(lambda: {}), folder=''):
         self.folder = folder
         super().__init__(parent)
         self.setMinimumSize(700, 400)
@@ -23,6 +25,7 @@ class ModuleForm(QMainWindow):
         self.o['active'] = dic['active']
 
         self.o['views'] = {} or dic['views']
+        self.o['outputs'] = ('outputs' in dic and dic['outputs']) or {}# or ('outputs' in dic and  dic['outputs'] )# TODO
 
         inputs_group = QGroupBox(self)
         inputs_lay = QVBoxLayout()
@@ -46,8 +49,8 @@ class ModuleForm(QMainWindow):
         save_btn.setIcon(QtGui.QIcon('assets/icons/save.png'))
         self.lay.addWidget(save_btn)
         for input_i in dic['keys']:
-            Input(self, 'group', None, {'add_delete': True, 'o': self.input_o, 'group_type':'input_definer', 'input_definer_values': input_i})
-
+            Input(self, 'group', None, {'add_delete': True, 'o': self.input_o, 'group_type': 'input_definer',
+                                        'input_definer_values': input_i})
 
         Input(self, 'texteditor', 'code')
 
@@ -67,18 +70,26 @@ class ModuleForm(QMainWindow):
                 },
             'image':
                 {
-                    'images': ['string', 'code'],
-                    'add toolbar': 'bool'
+                    'images': ['string', 'code']
                 }
 
         }
 
         self.g = InputGroup(self, 'views', h, opts={'o': self.o['views']})
+        h2 = {'output':
+                 {
+                     'name': 'string',
+                     'color': 'color',
+                     'value': 'code'
+                 }
+             }
+        self.gg = InputGroup(self, 'output', h2, opts={'o': self.o['outputs']})
+        # self.gg = InputGroup(self, 'outputs', h, opts={'o': self.o['outputs']})
+
 
     def add_input(self):
         Input(self, 'group', None,
               {'add_delete': True, 'o': self.input_o, 'group_type': 'input_definer'})
-
 
     def add_view(self):
         Input(self, 'group', None,
@@ -88,6 +99,7 @@ class ModuleForm(QMainWindow):
         name = self.o['module name']
         keys = [list(v.values()) for _, v in self.input_o.items()]
         with open(self.folder + name, 'w') as outfile:
-            json.dump({'name': name, 'keys': keys, 'views': self.o['views'], 'code': self.o['code'], 'active': self.o['active']}, outfile)
+            json.dump({'name': name, 'keys': keys, 'views': self.o['views'], 'outputs':self.o['outputs'],  'code': self.o['code'],
+                       'active': self.o['active']}, outfile)
         self.parent().load_from_path()
         self.parent().parent().parent().reload()

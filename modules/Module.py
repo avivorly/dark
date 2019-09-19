@@ -3,9 +3,6 @@ import datetime
 import numpy as np
 from numpy import exp
 from astropy.io import fits
-from matplotlib.figure import Figure
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 # import pickle
 import json
 import importlib
@@ -97,6 +94,11 @@ class Module():
         o = {}
         keys = []
 
+        # for output in :
+
+
+
+
         for nm, key_type, default in opts['keys']:
             o[nm] = default
             keys.append([nm, key_type])
@@ -132,13 +134,6 @@ class Module():
         views = views.replace('"{0}'.format(cls.r), '')
         views = views.replace('{0}"'.format(cls.r), '')
 
-
-        # for nm, tp, value in opts['views']:
-        #     if tp == 'string':
-        #         views.append('["{0}","{1}","""{2}"""]'.format(nm, tp, value))
-        #     else:
-        #         views.append('["{0}","{1}",{2}]'.format(nm, tp, value))
-
         return_line = 'return data, {0}'.format(views)
 
 
@@ -154,7 +149,11 @@ class Module():
 
         m.o = o
         m.keys = keys
-
+        if 'outputs' in opts:
+            # print(opts['outputs'])
+            m.outputs = opts['outputs']
+        else:
+            m.outputs = {}
 
         return m
 

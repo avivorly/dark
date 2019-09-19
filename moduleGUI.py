@@ -1,6 +1,6 @@
 from functools import partial
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QGroupBox, QHBoxLayout, QLabel,  QPushButton, QVBoxLayout
+from PyQt5.QtWidgets import QGroupBox, QHBoxLayout, QLabel,  QPushButton, QVBoxLayout, QWidget
 from ModuleInputForm import ModuleInputForm
 import inspect
 
@@ -40,9 +40,27 @@ class ModuleGui(QGroupBox):
 
         mainlay.addWidget(self.left)
         mainlay.addWidget(g)
-        mainlay.addWidget(self.right)
+
 
         # a.setLayout(loadLay)
+        # print(self.module.outputs['output'])
+        if 'output' in self.module.outputs:
+            outputs = self.module.outputs['output']
+            if outputs:
+                o_wid = QWidget()
+                o_lay = QVBoxLayout()
+                o_wid.setLayout(o_lay)
+                al.addWidget(o_wid)
+                for output in self.module.outputs['output']:
+
+                    q = QPushButton(output['name']['value'])
+                    q.setStyleSheet(f"background-color: {output['color']['value']}")
+                    # q.setFixedWidth(10)
+                    o_lay.addWidget(q)
+
+
+
+
 
         laybel = QLabel(self.module.__class__.__name__)
         al.addWidget(laybel)
@@ -53,7 +71,7 @@ class ModuleGui(QGroupBox):
         # color.setRed(100)
 
         # (color.getRgbF())
-
+        mainlay.addWidget(self.right)
         self.resize(20, 20)
         self.show()
 
