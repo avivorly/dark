@@ -44,9 +44,19 @@ class SandBox(QGroupBox):
                 left_module_gui = m
         if right_module_gui and left_module_gui and right_module_gui != left_module_gui:
             if left_module_gui.module not in right_module_gui.module.next_nodes:
-                right_module_gui.module.next_nodes.append(left_module_gui.module)
+                self.create_connection(right_module_gui, left_module_gui)
+            else:
+                self.break_connection(right_module_gui, left_module_gui)
             for m in self.gui_modules:
                 m.reset_on_of()
+
+    def create_connection(self, right_module_gui, left_module_gui):
+        right_module_gui.module.next_nodes.append(left_module_gui.module)
+
+
+    def break_connection(self, right_module_gui, left_module_gui):
+        right_module_gui.module.next_nodes.remove(left_module_gui.module)
+        left_module_gui.module.data = None
 
     def file_path(self):
         return self.parent().parent().toolbar.file_path_input.text()
@@ -115,10 +125,19 @@ class SandBox(QGroupBox):
                     p3 = np.array((event.x(), event.y()))
                     d = norm(np.cross(p2 - p1, p1 - p3)) / norm(p2 - p1)
                     if d < 35:
-                        next_nodes.remove(next_node)
+                        self.break_connection(gm, next_node.gui)
 
-    def mouseReleaseEvent(self, event):
-        print('2')
+
+
+    def force_stater(self):
+        m = [m for m in self.gui_modules if m.module not in map(lambda m: m.module.next_nodes, self.gui_modules)][0]
+        self.force_starter(m)
+
+    def save_to_jpg(self):
+        self.grab().save('sandbox.png')
+
+ # def mouseReleaseEvent(self, event):
+ #        print('2')
     #     l1 = self.last_press[0], self.last_press[1], event.x(), event.y()
     #     for gm in self.gui_modules:
     #         gm.center()
@@ -146,10 +165,3 @@ class SandBox(QGroupBox):
     #                 # if l1[0] < x < l1[3] and l2[0] < x < l2[3]:
     #                 #     print('wow')
     #                 #     next_nodes.remove(next_node)
-
-    def force_stater(self):
-        m = [m for m in self.gui_modules if m.module not in map(lambda m: m.module.next_nodes, self.gui_modules)][0]
-        self.force_starter(m)
-
-    def save_to_jpg(self):
-        self.grab().save('sandbox.png')
