@@ -51,7 +51,8 @@ class ModuleGui(QGroupBox):
 
                 q.setStyleSheet(f"background-color: {output['color']['value']}")
                 output['on'] = False
-                output['next_nodes'] = []
+                if 'next_nodes' not in output:
+                    output['next_nodes'] = []
                 output['btn'] = q
                 o_lay.addWidget(q)
                 q.clicked.connect(partial(self.click_btn, q))

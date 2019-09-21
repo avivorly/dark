@@ -43,7 +43,8 @@ class Module():
             # 'data': self.data,
             'o': self.o,
             'next_nodes': self.next_nodes,
-            'gui_props': None
+            'gui_props': None,
+            'outputs': self.outputs
 
         }
         if 'gui' in dir(self):
@@ -57,6 +58,9 @@ class Module():
         for m in modules:
             t = m.dumpp()
             t['next_nodes'] = [modules.index(n) for n in m.next_nodes]
+            for o in t['outputs']:
+                o['next_nodes'] = [modules.index(n) for n in o['next_nodes']]
+                del o['btn']
             arr.append(t)
 
         with open(path, 'w') as handle:
@@ -189,11 +193,15 @@ class Module():
                 for saved_hash in saved_modules:
                     m_class = next(x for x in modules_clss if x.__name__ == saved_hash['class'])
                     m = m_class()  # __init__ the module
-                    for p in ['o', 'gui_props', 'next_nodes']:
+                    for p in ['o', 'gui_props', 'next_nodes', 'outputs']:
                         setattr(m, p, saved_hash[p])
                     modules.append(m)
                 for m in modules:
                     m.next_nodes = [modules[n] for n in m.next_nodes]
+                    for o in m.outputs:
+                        # print(o)
+                        o['next_nodes'] = [modules[n] for n in o['next_nodes']]
+                        print(o['next_nodes'])
 
 
 

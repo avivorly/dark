@@ -39,9 +39,12 @@ class SandBox(QGroupBox):
             if mg.left.on:
                 left_module_gui = mg
         if right_module_gui and left_module_gui and right_module_gui != left_module_gui:
-            if left_module_gui.module not in right_module_gui.module.next_nodes:
+            if left_module_gui.module not in n_ms:
                 n_ms.append(left_module_gui.module)
                 o['on'] = False
+                print('add')
+            else:
+                self.break_btn_connection(o, left_module_gui)
 
 
                 # self.create_connection(right_module_gui, left_module_gui)
@@ -53,7 +56,10 @@ class SandBox(QGroupBox):
                     o['on'] = False
                     mg.update_btn(o['btn'])
 
+    def break_btn_connection(self, o, mg):
+        o['next_nodes'].remove(mg.module)
 
+        # break_btn_connection
     def update_connections(self):
         right_module_gui, left_module_gui = None, None
 
@@ -133,6 +139,7 @@ class SandBox(QGroupBox):
 
                         # lines[line] = [gm.module, next_gm.module]
                         qp.drawLine(*line)
+                        self.update()
                         # self.update()
 
         for gm in self.gui_modules:
@@ -149,7 +156,8 @@ class SandBox(QGroupBox):
 
                         # lines[line] = [gm.module, next_gm.module]
                         qp.drawLine(*line)
-        self.update()
+                        self.update()
+
 
     def mousePressEvent(self, event):
         self.last_press = [event.x(), event.y()]

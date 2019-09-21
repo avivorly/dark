@@ -40,12 +40,8 @@ class Input(AWidget):
             b = QPushButton('Pick Color')
             self.layout().addWidget(b)
             b.setStyleSheet(f'background-color: {value}')
-            def a():
-                s = str(QColorDialog.getColor().name())
-                w.setText(s)
-                b.setStyleSheet(f'background-color: {s}')
-
-            b.clicked.connect(a)
+            b.clicked.connect(lambda: w.setText(QColorDialog().getColor().name()))
+            b.clicked.connect(lambda: b.setStyleSheet(f'background-color: {w.text()}'))
         if tp == 'bool':
             value = value or 0
             func_name, w = ['stateChanged', QCheckBox()]
