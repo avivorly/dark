@@ -27,6 +27,33 @@ class SandBox(QGroupBox):
         self.gui_modules.append(gm)
         return gm
 
+
+    def update_btns(self):
+        right_module_gui, left_module_gui = None, None
+        op = None
+        for mg in self.gui_modules:
+            for o in mg.module.outputs:
+                if o['on']:
+                    right_module_gui = mg
+                    n_ms = o['next_nodes']
+            if mg.left.on:
+                left_module_gui = mg
+        if right_module_gui and left_module_gui and right_module_gui != left_module_gui:
+            if left_module_gui.module not in right_module_gui.module.next_nodes:
+                n_ms.append(left_module_gui.module)
+                o['on'] = False
+
+
+                # self.create_connection(right_module_gui, left_module_gui)
+            # else:
+            #     self.break_connection(right_module_gui, left_module_gui)
+            for m in self.gui_modules:
+                m.reset_on_of()
+                for o in mg.module.outputs:
+                    o['on'] = False
+                    mg.update_btn(o['btn'])
+
+
     def update_connections(self):
         right_module_gui, left_module_gui = None, None
 
@@ -96,7 +123,6 @@ class SandBox(QGroupBox):
         qp = QPainter()
         qp.begin(self)
         for gm in self.gui_modules:
-            gm.center()
             if gm.module.next_nodes:
                 for next_module in gm.module.next_nodes:
                     next_gm = next_module.gui
@@ -107,7 +133,23 @@ class SandBox(QGroupBox):
 
                         # lines[line] = [gm.module, next_gm.module]
                         qp.drawLine(*line)
-                        self.update()
+                        # self.update()
+
+        for gm in self.gui_modules:
+            for o in gm.module.outputs:
+                if 'next_nodes' in o:
+                    for next_module in o['next_nodes']:
+                        next_gm = next_module.gui
+                        acc = next_gm.closest_to(gm.center(), side=True)
+
+                        # bcc = gm.closest_to(next_gm.center(), side=False)
+                        b = o['btn']
+                        bcc = [b.x()+b.width() + gm.x(), o['btn'].y()+70+gm.y()]
+                        line = bcc[0], bcc[1], acc[0], acc[1]
+
+                        # lines[line] = [gm.module, next_gm.module]
+                        qp.drawLine(*line)
+        self.update()
 
     def mousePressEvent(self, event):
         self.last_press = [event.x(), event.y()]

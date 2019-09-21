@@ -112,9 +112,15 @@ class Module():
         before_lines = [
             'from modules.Module import Module',
             'import numpy as np',
+            'import copy',
             'import copy' + exl,
 
             'class {0}(Module):'.format(opts['name']),
+            i+ 'def __init__(self):',
+            i *2 + 'super().__init__()',
+            i * 2 + 'self.o = self.c_o.copy()',
+            i * 2 + 'self.keys = self.c_keys.copy()',
+            i * 2 + 'self.outputs = copy.deepcopy(self.c_outputs)',
             i + 'def process(self):'
 
 
@@ -136,9 +142,7 @@ class Module():
 
         return_line = 'return data, {0}'.format(views)
 
-
         lines = before_lines + [i * 2 + l for l in init_lines + opts['code'].split('\n') + [return_line]]
-
 
         with open('m/temp/{0}.py'.format(name), 'w') as file:
             file.write('\n'.join(lines))
@@ -147,18 +151,17 @@ class Module():
             del sys.modules[p]
         m = getattr(importlib.import_module(p), name)
 
-        m.o = o
-        m.keys = keys
-        if 'outputs' in opts:
-            m.outputs = opts['outputs']
+        m.c_o = o
+        m.c_keys = keys
+        if 'outputs' in opts and 'output' in opts['outputs']:
+            m.c_outputs = opts['outputs']['output']
         else:
-            m.outputs = {}
+            m.c_outputs = []
 
         return m
 
     @classmethod
     def h_t_s(cls, h):
-
         for k,v in h.items():
             if type(v) == dict and 'value' in v:
                 name = k

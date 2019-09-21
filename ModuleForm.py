@@ -70,7 +70,8 @@ class ModuleForm(QMainWindow):
                 },
             'image':
                 {
-                    'images': ['string', 'code']
+                    'images': ['string', 'code'],
+                    'add toolbar': 'bool'
                 }
 
         }

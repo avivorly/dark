@@ -16,9 +16,7 @@ class ModuleGui(QGroupBox):
         else:
             self.module = module
         self.module.gui = self
-        self.initUI()
 
-    def initUI(self):
         mainlay = QHBoxLayout()
         mainlay.setContentsMargins(0, 0, 0, 0)
 
@@ -41,25 +39,22 @@ class ModuleGui(QGroupBox):
         mainlay.addWidget(self.left)
         mainlay.addWidget(g)
 
+        outputs = self.module.outputs
+        if outputs:
+            o_wid = QWidget()
+            o_lay = QVBoxLayout()
+            o_wid.setLayout(o_lay)
+            al.addWidget(o_wid)
+            for output in outputs:
+                q = QPushButton(output['name']['value'])
+                q.o = output
 
-        # a.setLayout(loadLay)
-        # print(self.module.outputs['output'])
-        if 'output' in self.module.outputs:
-            outputs = self.module.outputs['output']
-            if outputs:
-                o_wid = QWidget()
-                o_lay = QVBoxLayout()
-                o_wid.setLayout(o_lay)
-                al.addWidget(o_wid)
-                for output in self.module.outputs['output']:
-
-                    q = QPushButton(output['name']['value'])
-                    q.setStyleSheet(f"background-color: {output['color']['value']}")
-                    # q.setFixedWidth(10)
-                    o_lay.addWidget(q)
-
-
-
+                q.setStyleSheet(f"background-color: {output['color']['value']}")
+                output['on'] = False
+                output['next_nodes'] = []
+                output['btn'] = q
+                o_lay.addWidget(q)
+                q.clicked.connect(partial(self.click_btn, q))
 
 
         laybel = QLabel(self.module.__class__.__name__)
@@ -74,6 +69,18 @@ class ModuleGui(QGroupBox):
         mainlay.addWidget(self.right)
         self.resize(20, 20)
         self.show()
+
+    def click_btn(self, btn):
+        btn.o['on'] = not btn.o['on']
+        self.update_btn(btn)
+    def update_btn(self, btn):
+        if btn.o['on']:
+            btn.setStyleSheet(f"background-color: {'blue'}")
+        else:
+            btn.setStyleSheet(f"background-color: {btn.o['color']['value']}")
+        self.sand.update_btns()
+
+
 
     def on_of(self, side, force_off = False):
         if force_off:
@@ -116,6 +123,7 @@ class ModuleGui(QGroupBox):
             self.__mouseMovePos = globalPos
 
     def mouseDoubleClickEvent(self, event):
+        print(self.module.outputs)
         self.sand.force_starter(self)
 
 
