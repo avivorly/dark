@@ -28,96 +28,9 @@ def stdout_redirected(to=os.devnull, stdout=None):
             #NOTE: dup2 makes stdout_fd inheritable unconditionally
             stdout.flush()
             os.dup2(copied.fileno(), stdout_fd)  # $ exec >&copied
-from functools import partial
-from PyQt5.QtWidgets import QTableWidgetItem
-import datetime
-from PyQt5 import QtWidgets
-import numpy as np
-from numpy import exp
-from astropy.io import fits
 import os
 import sys
 import re
-from matplotlib.figure import Figure
-from PyQt5.QtWidgets import QFileDialog
-
-import random
-# exec(open("/home/aviv/avivsroot/lib/aviv_root.py").read())
-from PyQt5.QtWidgets import (QMessageBox)
-from PyQt5.QtWidgets import QMainWindow, QAction
-from PyQt5.QtWidgets import (QApplication, QCheckBox,
-                             QGridLayout, QGroupBox, QHBoxLayout, QLabel, QLineEdit,
-                             QPushButton, QSizePolicy,
-                             QSpinBox, QTableWidget,
-                             QVBoxLayout, QWidget)
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
-
-
-class PlotCanvas(FigureCanvas):
-    def __init__(self, parent=None, width=9, height=4, dpi=50):
-        fig = Figure(figsize=(width, height), dpi=dpi)
-
-        FigureCanvas.__init__(self, fig)
-        self.setParent(parent)
-
-        FigureCanvas.setSizePolicy(self, \
-                                   QSizePolicy.Expanding,
-                                   QSizePolicy.Expanding)
-        FigureCanvas.updateGeometry(self)
-        self.ax = None
-        self.axArr = None
-
-    def plot(self, data, f, bins, vmin, vmax,fmin,fmax,ymax):
-        v = np.linspace(vmin, vmax, 1000)
-        def p(x):
-            y = eval(f)
-            return y
-
-        if not self.ax:
-            self.ax = self.figure.add_subplot(111)
-        self.ax.clear()
-        self.ax.set_xlim(vmin, vmax)
-
-        self.ax.plot(v, p(v).astype(np.float))
-
-        self.ax.hist(list(data), int(bins*((vmax-vmin)/(fmax-fmin))), (vmin, vmax))
-        self.figure.tight_layout()
-
-        self.ax.set_ylim(bottom=0)
-        if ymax != 0:
-            self.ax.set_ylim(top=ymax)
-        self.draw()
-
-
-
-    def plot2(self, matArr, gamma):
-        newMatarr = []
-        for mat in matArr:
-            nm = np.power(np.absolute(mat), gamma)
-            for i in range(0, len(mat)):
-                nm[i] *= np.sign(mat[i])
-            newMatarr.append(nm)
-
-
-
-        if self.axArr is not None:
-            for i in range(0, len(self.axArr)):
-                ax = self.axArr[i]
-                self.figure.delaxes(ax)
-
-        self.axArr = self.figure.subplots(1, 3)
-
-
-        for i in range(0, len(self.axArr)):
-            ax = self.axArr[i]
-            ax.clear()
-            ax.axis('off')
-
-            # ax.margins(1000)
-            ax.imshow(newMatarr[i], cmap='hot')
-        self.figure.tight_layout()
-        self.draw()
 
 
 class ROOTFitter:
@@ -153,9 +66,10 @@ class ROOTFitter:
 
             formulas = []
             names = {}
-            mone = 0
-            if not free:
-                mone += 1
+            if free:
+                mone = 0
+            else:
+                mone = 1
             for i in range(num_of_gauses):
                 if free:
                     d = self.make_gaus(None, names, mone)
@@ -204,16 +118,19 @@ class ROOTFitter:
             res[par_name] = [total.GetParameter(i), total.GetParError(i)]
         return res
 
+
+    #  generate str from ROOT func
     def analizeFunc(self, f, places=False, replace = True):
         N = f.GetNpar()
         pars = {}
         fSTR = str(f.GetFormula())[21:]
-        for i in range(0, N):
-            if replace:
-                pars[N] = f.GetParameter(i)
+
+        if replace:
+            for i in range(N):
+                p = f.GetParameter(i)
                 if places:
-                    pars[N] = round(pars[N], places)
-                fSTR = fSTR.replace('[{0}]'.format(i), str(pars[N]))
+                    p = round(pars[N], places)
+                fSTR = fSTR.replace('[{0}]'.format(i), str(p))
         return fSTR
 
     def analizeTextFunc(self,f):
@@ -223,55 +140,6 @@ class ROOTFitter:
         dic['formula'] = f
         return dic
 
-    def fromfunc(self):
-        funcstr = self.get_value_from_widget(self.formulainputbox)
-        fdit = self.analizeTextFunc(funcstr)
-        self.create_dynamic_sett_for_func(fdit)
 
-    def create_data(self, o):
-        data = []
-        for j in range(o['virtual count']):
-            j = j
-            n = o['number {0}'.format(j)]
-            for i in range(n):
-                data.append(self.ROOT['gRandom'].Gaus(o['median {0}'.format(j)], o['sigma {0}'.format(j)]))
-        return (data)
-
-# #
-# r = ROOTFitter()
-# o = {'virtual count': 1, 'number 0': 1000, 'median 0': 0, 'sigma 0': 3}
-#
-# data = r.create_data(o)
-#
-# oo = {'virtual count': 1, 'simnum': 0, 'gausCount': 3, 'minRange': -150, 'maxRange': 700, 'y max': 0, 'showMin': -150, 'showMax': 600, 'bins': 2000, 'decimal places': 3, 'isFree': False, 'gamma': '0.2', 'params': 'N', 'min 0': -100, 'max 0': 100, 'min 1': 200, 'max 1': 500, 'min 2': 500, 'max 2': 700, 'number 0': 10000, 'median 0': 0, 'sigma 0': 47}
-# dic = r.GausFit(data,oo)
-#
-#
-# ls = []
-# dic_copy = dic.copy()
-# dic_copy.pop('func')
-#
-# for k, vls in dic_copy.items():
-#     va, er = map(lambda value: str(round(value, 3)), vls)
-#     ls.append(k)
-#
-# f = r.analizeFunc(dic['func'], replace=False)
-#
-#
-#
-#
-#
-# v = np.linspace(-300, 300, 1000)
-# def p(x):
-#     y = eval(f)
-#     return y
-#
-#
-# xs,ys = [],[]
-# for val in v:
-#     xs.append(v)
-#     ys.append(v)
-#
-#
 
 

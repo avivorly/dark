@@ -76,11 +76,9 @@ class ResultView(QWidget):
         # toolbar.setIconSize(QSize(16, 16))
         main_lay.addWidget(self.toolbar)
         self.o = {}
-        print(extras)
         for extra in extras:
 
             for h in extra:
-                # print(h)
                 l = QLabel(h['name'])
                 lay.addWidget(l)
                 views = h['views']

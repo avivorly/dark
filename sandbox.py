@@ -137,7 +137,6 @@ class SandBox(QGroupBox):
         self.grab().save('sandbox.png')
 
  # def mouseReleaseEvent(self, event):
- #        print('2')
     #     l1 = self.last_press[0], self.last_press[1], event.x(), event.y()
     #     for gm in self.gui_modules:
     #         gm.center()

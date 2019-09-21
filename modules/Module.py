@@ -150,7 +150,6 @@ class Module():
         m.o = o
         m.keys = keys
         if 'outputs' in opts:
-            # print(opts['outputs'])
             m.outputs = opts['outputs']
         else:
             m.outputs = {}
