@@ -1,5 +1,5 @@
-from PyQt5 import QtGui
-from PyQt5.QtWidgets import QMainWindow, QGroupBox, QPushButton, QWidget, QVBoxLayout
+from PyQt5 import QtGui, QtCore
+from PyQt5.QtWidgets import QMainWindow, QGroupBox, QPushButton, QWidget, QVBoxLayout, QScrollArea
 from Input import Input
 import json
 from collections import defaultdict
@@ -12,10 +12,17 @@ class ModuleForm(QMainWindow):
         super().__init__(parent)
         self.setMinimumSize(700, 400)
         self.setWindowTitle("Module editor")
+
         main_window = QWidget(self)
-        self.setCentralWidget(main_window)
         self.lay = QVBoxLayout()
         main_window.setLayout(self.lay)
+
+
+        scrollWidget = QScrollArea()
+        scrollWidget.setWidget(main_window)
+        scrollWidget.setWidgetResizable(True)  # <---------------
+
+        self.setCentralWidget(scrollWidget)
 
         self.o = {}
         self.input_o = {}
