@@ -8,14 +8,16 @@ import json
 import importlib
 import sys, pkgutil
 import copy
+
+
 class Module():
     r = '$$$'
 
     def __init__(self):
         super().__init__()
-        if not hasattr(self,'o'):
+        if not hasattr(self, 'o'):
             self.o = {}
-        if not hasattr(self,'e_o'):
+        if not hasattr(self, 'e_o'):
             self.e_o = {}
         self.next_nodes = []
 
@@ -44,10 +46,8 @@ class Module():
             for next_node in self.next_nodes:
                 next_node.data = data
 
-
-
                 next_module_output = next_node.run()
-                extras_arr +=next_module_output
+                extras_arr += next_module_output
             extras_arr = [[module_output] + a for a in extras_arr]
             return extras_arr
         else:
@@ -80,16 +80,13 @@ class Module():
     @classmethod
     def save_to_file(cls, modules, path):
 
-
-
-
         arr = []
         for m in modules:
             t = m.dumpp(modules)
             # t['next_nodes'] = [modules.index(n) for n in m.next_nodes]
             # for o in t['outputs']:
-                # o['next_nodes'] = [modules.index(n) for n in o['next_nodes']]
-                # del o['btn']
+            # o['next_nodes'] = [modules.index(n) for n in o['next_nodes']]
+            # del o['btn']
 
             arr.append(t)
 
@@ -99,7 +96,6 @@ class Module():
     @classmethod
     def get_all_modules(cls):
         return cls.import_all_modules_from_pickle()
-
 
     @classmethod
     def import_all_file_modules(cls):
@@ -144,13 +140,12 @@ class Module():
             'import copy',
             'import copy' + exl,
             'class {0}(Module):'.format(opts['name']),
-            i+ 'def __init__(self):',
-            i *2 + 'super().__init__()',
+            i + 'def __init__(self):',
+            i * 2 + 'super().__init__()',
             i * 2 + 'self.o = self.c_o.copy()',
             i * 2 + 'self.keys = self.c_keys.copy()',
             i * 2 + 'self.outputs = copy.deepcopy(self.c_outputs)',
             i + 'def process(self):'
-
 
         ]
 
@@ -166,11 +161,8 @@ class Module():
             'for h in e_o.values():',
             i + 'for k,v in h.items():',
             2 * i + 'dynamics[k] = v',
-            # 'path = "may23/proc_skp_2hr_vddOFF_14_12.fits"'
             'for k,v in dynamics.items():',
-            i+'globals()[k]= v',
-            # i+'path = 123',
-            'print(dynamics)'
+            i + 'globals()[k]= v'
 
         ]
 
@@ -178,8 +170,8 @@ class Module():
         views = views.replace('"{0}'.format(cls.r), '')
         views = views.replace('{0}"'.format(cls.r), '')
         if 'outputs' in opts and opts['outputs']:
-            computed_outputs = json.dumps(cls.h_t_s(opts['outputs'])).replace('"{0}'.format(cls.r), '').replace('{0}"'.format(cls.r), '')
-
+            computed_outputs = json.dumps(cls.h_t_s(opts['outputs'])).replace('"{0}'.format(cls.r), '').replace(
+                '{0}"'.format(cls.r), '')
         else:
             computed_outputs = "{'output':[]}"
         # outputs_lines = [
@@ -205,13 +197,12 @@ class Module():
             m.c_outputs = opts['outputs']['output']
         else:
             m.c_outputs = []
-
         return m
 
     @classmethod
     def h_t_s(cls, h):
         if type(h) == dict:
-            for k,v in h.items():
+            for k, v in h.items():
                 if type(v) == dict and 'value' in v:
                     name = k
                     value = v['value']
@@ -226,10 +217,8 @@ class Module():
                     cls.h_t_s(v)
         return h
 
-
-
     @classmethod
-    def load_from_file(cls, path): #  loads sandbox
+    def load_from_file(cls, path):  # loads sandbox
         modules_clss, es = cls.get_all_modules()
         try:
             modules = []
@@ -252,22 +241,16 @@ class Module():
             import traceback
             es.append(traceback.format_exc())
 
-
         return modules, es
 
-
-
     @classmethod
-    def open_file(cls, path, CONST_nonReal = 20):
+    def open_file(cls, path, nonReal):#, nonReal={'top': 10, 'bottom': 10, 'left': 10, 'right': 10}):
         m = fits.open(path)[0].data
-        rows = len(m)
-        cols = len(m[0])
+        rows_len, cols_len = m.shape
 
-        m = np.delete(m, np.s_[0:CONST_nonReal], axis=0)
-        m = np.delete(m, np.s_[0:CONST_nonReal], axis=1)
-        m = np.delete(m, np.s_[rows - CONST_nonReal:rows], axis=0)
-        m = np.delete(m, np.s_[cols - CONST_nonReal:cols], axis=1)
-        return m
+        nonReal['top']
+        [nonReal['top'], nonReal['bottom'], nonReal['left'],nonReal['right']]
+        return m[nonReal['top']:rows_len - 1 - nonReal['bottom'], nonReal['left']:cols_len - 1 - nonReal['right']]
 
     @classmethod
     def mask(cls, mat, mask):
@@ -292,8 +275,6 @@ class Module():
                     mat[i][j] = np.NAN
         return mat
 
-
-
     @classmethod
     def rows_of(cls, mat):
         return mat
@@ -309,15 +290,15 @@ class Module():
     @classmethod
     def get_neighbors_indices(cls, i, j, x_max, y_max):
         arr = [
-                        [i + 1, j],
-                        [i - 1, j],
-                        [i + 1, j + 1],
-                        [i - 1, j - 1],
-                        [i, j - 1],
-                        [i, j + 1],
-                        [i + 1, j - 1],
-                        [i - 1, j + 1],
-                    ]
+            [i + 1, j],
+            [i - 1, j],
+            [i + 1, j + 1],
+            [i - 1, j - 1],
+            [i, j - 1],
+            [i, j + 1],
+            [i + 1, j - 1],
+            [i - 1, j + 1],
+        ]
         return [xy for xy in arr if 0 <= xy[0] < x_max and 0 <= xy[1] < y_max]
 
     @classmethod
@@ -335,42 +316,41 @@ class Module():
 
         return indices
 
-
- #
- #
- # def create_module(cls, opts):
- #        # name, keys, views, process
- #        module = type(opts['name'], (Module,), {})
- #        o = {}
- #        keys = []
- #        for name, key_type, default in opts['keys']:
- #            o[name] = default
- #            keys.append([name, key_type])
- #        module.o = o
- #        module.keys = keys
- #        # module.views_keys = views
- #        # before_lines -
- #        init_lines = [
- #            'import copy',
- #            'if hasattr(self, "data"):'
- #            '   data = self.data.copy() if getattr(self.data, "copy", False) else copy.deepcopy(self.data)',
- #            'o = copy.deepcopy(self.o)'
- #        ]
- #
- #        views = ['["{0}","{1}",{2}]'.format(*k) for k in opts['views']]
- #        return_line = 'return data, [{0}]'.format(','.join(views))
- #
- #        i = '    '
- #        lines = [i + l for l in init_lines +  opts['code'].split('\n') + [return_line]]
- #
- #
- #        f = '\n'.join(lines)
- #
- #        str = 'def process(self):\n{0}'.format(f)
- #        h = {}
- #        exec(str, globals(), h)
- #
- #        setattr(module, 'process', h['process'])
- #
- #        #  TODO create actual files on temp dir - helps with debugging
- #        return module
+#
+#
+# def create_module(cls, opts):
+#        # name, keys, views, process
+#        module = type(opts['name'], (Module,), {})
+#        o = {}
+#        keys = []
+#        for name, key_type, default in opts['keys']:
+#            o[name] = default
+#            keys.append([name, key_type])
+#        module.o = o
+#        module.keys = keys
+#        # module.views_keys = views
+#        # before_lines -
+#        init_lines = [
+#            'import copy',
+#            'if hasattr(self, "data"):'
+#            '   data = self.data.copy() if getattr(self.data, "copy", False) else copy.deepcopy(self.data)',
+#            'o = copy.deepcopy(self.o)'
+#        ]
+#
+#        views = ['["{0}","{1}",{2}]'.format(*k) for k in opts['views']]
+#        return_line = 'return data, [{0}]'.format(','.join(views))
+#
+#        i = '    '
+#        lines = [i + l for l in init_lines +  opts['code'].split('\n') + [return_line]]
+#
+#
+#        f = '\n'.join(lines)
+#
+#        str = 'def process(self):\n{0}'.format(f)
+#        h = {}
+#        exec(str, globals(), h)
+#
+#        setattr(module, 'process', h['process'])
+#
+#        #  TODO create actual files on temp dir - helps with debugging
+#        return module
