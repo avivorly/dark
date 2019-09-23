@@ -64,9 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
-      <find>deep</find>
-      <find>update_btn</find>
       <find>computed_outputs</find>
       <find>next</find>
       <find>force</find>
@@ -94,6 +91,9 @@
       <find>fits</find>
       <find>QPen</find>
       <find>QColor</find>
+      <find>click_btn</find>
+      <find>break</find>
+      <find>styl</find>
     </findStrings>
     <replaceStrings>
       <replace>libPyROOT</replace>

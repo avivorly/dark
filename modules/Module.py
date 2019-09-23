@@ -190,6 +190,8 @@ class Module():
         p = 'm.temp.{0}'.format(name)
         if p in sys.modules:
             del sys.modules[p]
+        import time
+        time.sleep(0.005)
         m = getattr(importlib.import_module(p), name)
 
         m.c_o = o

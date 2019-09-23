@@ -76,11 +76,15 @@ class ModuleGui(QGroupBox):
         btn.o['on'] = not btn.o['on']
         self.update_btn(btn)
     def update_btn(self, btn):
+        self.update_style(btn)
+        self.sand.update_btns()
+
+    def update_style(self, btn):
         if btn.o['on']:
-            btn.setStyleSheet(f"background-color: {'blue'}")
+            btn.setStyleSheet(f"background-color: {'#222'}")
         else:
             btn.setStyleSheet(f"background-color: {btn.o['color']['value']}")
-        self.sand.update_btns()
+
 
 
 
@@ -125,6 +129,7 @@ class ModuleGui(QGroupBox):
             self.__mouseMovePos = globalPos
 
     def mouseDoubleClickEvent(self, event):
+        print(self.module.outputs)
         self.sand.force_starter(self)
 
     def set_sarter(self, flag):

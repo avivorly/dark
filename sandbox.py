@@ -30,33 +30,34 @@ class SandBox(QGroupBox):
 
     def update_btns(self):
         right_module_gui, left_module_gui = None, None
-        op = None
         for mg in self.gui_modules:
             for o in mg.module.outputs:
                 if o['on']:
                     right_module_gui = mg
-                    n_ms = o['next_nodes']
+                    right_o = o
+
+
             if mg.left.on:
                 left_module_gui = mg
+
+
         if right_module_gui and left_module_gui and right_module_gui != left_module_gui:
-            if left_module_gui.module not in n_ms:
-                n_ms.append(left_module_gui.module)
-                o['on'] = False
+            if left_module_gui.module not in right_o['next_nodes']:
+                right_o['next_nodes'].append(left_module_gui.module)
+                right_o['on'] = False
+                mg.update_style(right_o['btn'])
             else:
-                self.break_btn_connection(o, left_module_gui)
+                self.break_btn_connection(right_o, left_module_gui)
 
-
-                # self.create_connection(right_module_gui, left_module_gui)
-            # else:
-            #     self.break_connection(right_module_gui, left_module_gui)
             for m in self.gui_modules:
                 m.reset_on_of()
                 for o in mg.module.outputs:
                     o['on'] = False
-                    mg.update_btn(o['btn'])
+                    mg.update_style(o['btn'])
 
     def break_btn_connection(self, o, mg):
-        print('break')
+        o['on'] = False
+        mg.update_style(o['btn'])
         o['next_nodes'].remove(mg.module)
 
         # break_btn_connection
@@ -126,9 +127,9 @@ class SandBox(QGroupBox):
     # def line(self,m_a, m_b):
 
     def paintEvent(self, *args, **kwargs):
-        pen = QPen(Qt.black, 2, Qt.SolidLine)
+
         qp = QPainter()
-        qp.setPen(pen)
+
         qp.begin(self)
         for gm in self.gui_modules:
             if gm.module.next_nodes:
@@ -156,19 +157,13 @@ class SandBox(QGroupBox):
                         bcc = [b.x()+b.width() + gm.x(), o['btn'].y()+70+gm.y()]
                         line = bcc[0], bcc[1], acc[0], acc[1]
 
-                        # lines[line] = [gm.module, next_gm.module]
-
+                        pen = QPen(Qt.black, 2, Qt.SolidLine)
+                        qp.setPen(pen)
                         pen.setStyle(Qt.CustomDashLine)
                         pen.setColor(QColor(o['color']['value']))
-                        # pen.setColor(self.backgroundRole(), Qt.white)
                         pen.setDashPattern([1, 10, 1, 1])
-                        # pen.setDashOffset(50)
-                        # pen.dashOffset(100)
-                        # pen.setWidth(2)
                         qp.setPen(pen)
 
-                        # pen.setStyle(Qt.DashDotDotLine)
-                        # qp.setPen(pen)
                         qp.drawLine(*line)
                         self.update()
 
