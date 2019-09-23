@@ -27,11 +27,11 @@ class Module():
         }
 
         for computed_output in self.computed_outputs['output']:
-            next_nodes = []
+
             for nn in self.outputs:
                 if nn['name']['value'] == computed_output['name']['value']:
                     next_nodes = nn['next_nodes']
-            print(next_nodes)
+
             for next_node in next_nodes:
                 next_node.o[computed_output['name']['value']] = computed_output['value']['value']
 
@@ -55,7 +55,7 @@ class Module():
         for output in self.outputs:
             outputs.append({
                 'name': output['name'],
-                'color': output['name'],
+                'color': output['color'],
                 'value': output['value'],
                 'next_nodes': [modules.index(n) for n in output['next_nodes']]
             })

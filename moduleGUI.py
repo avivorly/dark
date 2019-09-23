@@ -56,6 +56,7 @@ class ModuleGui(QGroupBox):
                 output['btn'] = q
                 o_lay.addWidget(q)
                 q.clicked.connect(partial(self.click_btn, q))
+                self.update_btn(q)
 
 
         laybel = QLabel(self.module.__class__.__name__)
