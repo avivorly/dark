@@ -15,6 +15,8 @@ class Module():
         super().__init__()
         if not hasattr(self,'o'):
             self.o = {}
+        if not hasattr(self,'e_o'):
+            self.e_o = {}
         self.next_nodes = []
 
     def run(self):
@@ -27,13 +29,15 @@ class Module():
         }
 
         for computed_output in self.computed_outputs['output']:
-
             for nn in self.outputs:
                 if nn['name']['value'] == computed_output['name']['value']:
                     next_nodes = nn['next_nodes']
 
             for next_node in next_nodes:
-                next_node.o[computed_output['name']['value']] = computed_output['value']['value']
+                module_id = id(self)
+                if module_id not in next_node.e_o:
+                    next_node.e_o[module_id] = {}
+                next_node.e_o[module_id][computed_output['name']['value']] = computed_output['value']['value']
 
         if self.next_nodes:
             extras_arr = []
@@ -50,7 +54,6 @@ class Module():
             return [[module_output]]
 
     def dumpp(self, modules):
-
         outputs = []
         for output in self.outputs:
             outputs.append({
@@ -140,7 +143,6 @@ class Module():
             'import numpy as np',
             'import copy',
             'import copy' + exl,
-
             'class {0}(Module):'.format(opts['name']),
             i+ 'def __init__(self):',
             i *2 + 'super().__init__()',
@@ -152,14 +154,24 @@ class Module():
 
         ]
 
-
-
         init_lines = [
             'if hasattr(self, "data"):'
             '   data = self.data.copy() if getattr(self.data, "copy", False) else copy.deepcopy(self.data)',
+            'dynamics = {}',
             'o = copy.deepcopy(self.o)',
             'for k,v in o.items():',
-            i + 'globals()[k] = v'
+            i + 'dynamics[k] = v',
+            'e_o = copy.deepcopy(self.e_o)',
+
+            'for h in e_o.values():',
+            i + 'for k,v in h.items():',
+            2 * i + 'dynamics[k] = v',
+            # 'path = "may23/proc_skp_2hr_vddOFF_14_12.fits"'
+            'for k,v in dynamics.items():',
+            i+'globals()[k]= v',
+            # i+'path = 123',
+            'print(dynamics)'
+
         ]
 
         views = json.dumps(cls.h_t_s(opts['views']))

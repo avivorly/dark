@@ -126,9 +126,6 @@ class ModuleGui(QGroupBox):
 
     def mouseDoubleClickEvent(self, event):
         self.sand.force_starter(self)
-        print(self.module.o)
-
-
 
     def set_sarter(self, flag):
         if flag:
