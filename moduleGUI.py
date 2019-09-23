@@ -124,7 +124,6 @@ class ModuleGui(QGroupBox):
             self.__mouseMovePos = globalPos
 
     def mouseDoubleClickEvent(self, event):
-        print(self.module.outputs)
         self.sand.force_starter(self)
 
 

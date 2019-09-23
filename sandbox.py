@@ -42,7 +42,6 @@ class SandBox(QGroupBox):
             if left_module_gui.module not in n_ms:
                 n_ms.append(left_module_gui.module)
                 o['on'] = False
-                print('add')
             else:
                 self.break_btn_connection(o, left_module_gui)
 
@@ -208,9 +207,5 @@ class SandBox(QGroupBox):
     #                 c2 = c_of_line(*l2)
     #
     #                 # x = (c2 - c1) / (m1 - m2)
-    #                 # print(m1,c1)
-    #                 print(m2, c2)
-    #                 print('wow')
     #                 # if l1[0] < x < l1[3] and l2[0] < x < l2[3]:
-    #                 #     print('wow')
     #                 #     next_nodes.remove(next_node)

@@ -7,7 +7,6 @@ from astropy.io import fits
 import json
 import importlib
 import sys, pkgutil
-from AMsgBox import  AMsgBox
 class Module():
     r = '$$$'
 
@@ -30,6 +29,11 @@ class Module():
             extras_arr = []
             for next_node in self.next_nodes:
                 next_node.data = data
+
+                for computed_output in self.computed_outputs['output']:
+                    print(computed_output)
+                    next_node.o[computed_output['name']['value']] = computed_output['value']['value']
+
                 next_module_output = next_node.run()
                 extras_arr +=next_module_output
             extras_arr = [[module_output] + a for a in extras_arr]
@@ -98,11 +102,6 @@ class Module():
         o = {}
         keys = []
 
-        # for output in :
-
-
-
-
         for nm, key_type, default in opts['keys']:
             o[nm] = default
             keys.append([nm, key_type])
@@ -143,10 +142,18 @@ class Module():
         views = json.dumps(cls.h_t_s(opts['views']))
         views = views.replace('"{0}'.format(cls.r), '')
         views = views.replace('{0}"'.format(cls.r), '')
-
+        if 'outputs' in opts:
+            computed_outputs = json.dumps(cls.h_t_s(opts['outputs'])).replace('"{0}'.format(cls.r), '').replace('{0}"'.format(cls.r), '')
+        else:
+            computed_outputs = '{}'
+        # outputs_lines = [
+        #     ''
+        #     'for output in self.outputs:'
+        # ]
+        outputs_line = f'self.computed_outputs = {computed_outputs}'
         return_line = 'return data, {0}'.format(views)
 
-        lines = before_lines + [i * 2 + l for l in init_lines + opts['code'].split('\n') + [return_line]]
+        lines = before_lines + [i * 2 + l for l in init_lines + opts['code'].split('\n') + [outputs_line, return_line]]
 
         with open('m/temp/{0}.py'.format(name), 'w') as file:
             file.write('\n'.join(lines))
@@ -157,6 +164,7 @@ class Module():
 
         m.c_o = o
         m.c_keys = keys
+
         if 'outputs' in opts and 'output' in opts['outputs']:
             m.c_outputs = opts['outputs']['output']
         else:
@@ -198,10 +206,10 @@ class Module():
                     modules.append(m)
                 for m in modules:
                     m.next_nodes = [modules[n] for n in m.next_nodes]
+                    print(m.outputs)
                     for o in m.outputs:
-                        # print(o)
                         o['next_nodes'] = [modules[n] for n in o['next_nodes']]
-                        print(o['next_nodes'])
+                    print(m.outputs)
 
 
 

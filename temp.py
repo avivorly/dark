@@ -1,11 +1,2 @@
-class Person:
-    name = 'Adam'
-
-
-p ={}
-print('Before modification:', p.name)
-
-# setting name to 'John'
-setattr(p, 'name', 'John')
-
-print('After modification:', p.name)
+for computed_output in self.computed_outputs:
+    next_node.o[computed_output['name']['value']] = computed_output['value']['value']
