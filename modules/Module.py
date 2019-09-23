@@ -125,6 +125,8 @@ class Module():
         keys = []
 
         for nm, key_type, default in opts['keys']:
+            if key_type == 'code':
+                default = eval(default)
             o[nm] = default
             keys.append([nm, key_type])
 
@@ -202,7 +204,7 @@ class Module():
     @classmethod
     def h_t_s(cls, h):
         if type(h) == dict:
-            for k, v in h.items():
+            for k,v in h.items():
                 if type(v) == dict and 'value' in v:
                     name = k
                     value = v['value']

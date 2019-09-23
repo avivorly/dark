@@ -92,7 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fromfunc</find>
       <find>analizeTextFunc</find>
       <find>ragne(</find>
       <find>dumpp</find>
@@ -120,8 +119,9 @@
       <find>path</find>
       <find>open_file</find>
       <find>python</find>
-      <find>h_</find>
+      <find>h_t_s</find>
       <find>print(</find>
+      <find>h_</find>
     </findStrings>
     <replaceStrings>
       <replace>libPyROOT</replace>
