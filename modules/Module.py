@@ -7,6 +7,7 @@ from astropy.io import fits
 import json
 import importlib
 import sys, pkgutil
+import copy
 class Module():
     r = '$$$'
 
@@ -25,14 +26,21 @@ class Module():
             'views': views
         }
 
+        for computed_output in self.computed_outputs['output']:
+            next_nodes = []
+            for nn in self.outputs:
+                if nn['name']['value'] == computed_output['name']['value']:
+                    next_nodes = nn['next_nodes']
+            print(next_nodes)
+            for next_node in next_nodes:
+                next_node.o[computed_output['name']['value']] = computed_output['value']['value']
+
         if self.next_nodes:
             extras_arr = []
             for next_node in self.next_nodes:
                 next_node.data = data
 
-                for computed_output in self.computed_outputs['output']:
-                    print(computed_output)
-                    next_node.o[computed_output['name']['value']] = computed_output['value']['value']
+
 
                 next_module_output = next_node.run()
                 extras_arr +=next_module_output
@@ -41,14 +49,24 @@ class Module():
         else:
             return [[module_output]]
 
-    def dumpp(self):
+    def dumpp(self, modules):
+
+        outputs = []
+        for output in self.outputs:
+            outputs.append({
+                'name': output['name'],
+                'color': output['name'],
+                'value': output['value'],
+                'next_nodes': [modules.index(n) for n in output['next_nodes']]
+            })
+
         out = {
             'class': self.__class__.__name__,
             # 'data': self.data,
             'o': self.o,
-            'next_nodes': self.next_nodes,
+            'next_nodes': [modules.index(n) for n in self.next_nodes],
             'gui_props': None,
-            'outputs': self.outputs
+            'outputs': outputs
 
         }
         if 'gui' in dir(self):
@@ -58,13 +76,18 @@ class Module():
 
     @classmethod
     def save_to_file(cls, modules, path):
+
+
+
+
         arr = []
         for m in modules:
-            t = m.dumpp()
-            t['next_nodes'] = [modules.index(n) for n in m.next_nodes]
-            for o in t['outputs']:
-                o['next_nodes'] = [modules.index(n) for n in o['next_nodes']]
-                del o['btn']
+            t = m.dumpp(modules)
+            # t['next_nodes'] = [modules.index(n) for n in m.next_nodes]
+            # for o in t['outputs']:
+                # o['next_nodes'] = [modules.index(n) for n in o['next_nodes']]
+                # del o['btn']
+
             arr.append(t)
 
         with open(path, 'w') as handle:
@@ -142,10 +165,11 @@ class Module():
         views = json.dumps(cls.h_t_s(opts['views']))
         views = views.replace('"{0}'.format(cls.r), '')
         views = views.replace('{0}"'.format(cls.r), '')
-        if 'outputs' in opts:
+        if 'outputs' in opts and opts['outputs']:
             computed_outputs = json.dumps(cls.h_t_s(opts['outputs'])).replace('"{0}'.format(cls.r), '').replace('{0}"'.format(cls.r), '')
+
         else:
-            computed_outputs = '{}'
+            computed_outputs = "{'output':[]}"
         # outputs_lines = [
         #     ''
         #     'for output in self.outputs:'
@@ -174,25 +198,26 @@ class Module():
 
     @classmethod
     def h_t_s(cls, h):
-        for k,v in h.items():
-            if type(v) == dict and 'value' in v:
-                name = k
-                value = v['value']
-                tp = v['type']
-                sb = '"""'
-                if tp == 'code':
-                    v['value'] = cls.r + value + cls.r
-            elif type(v) == list:
-                for hash in v:
-                    cls.h_t_s(hash)
-            else:
-                cls.h_t_s(v)
+        if type(h) == dict:
+            for k,v in h.items():
+                if type(v) == dict and 'value' in v:
+                    name = k
+                    value = v['value']
+                    tp = v['type']
+                    sb = '"""'
+                    if tp == 'code':
+                        v['value'] = cls.r + value + cls.r
+                elif type(v) == list:
+                    for hash in v:
+                        cls.h_t_s(hash)
+                else:
+                    cls.h_t_s(v)
         return h
 
 
 
     @classmethod
-    def load_from_file(cls, path): # loads sandbox
+    def load_from_file(cls, path): #  loads sandbox
         modules_clss, es = cls.get_all_modules()
         try:
             modules = []
@@ -206,10 +231,8 @@ class Module():
                     modules.append(m)
                 for m in modules:
                     m.next_nodes = [modules[n] for n in m.next_nodes]
-                    print(m.outputs)
                     for o in m.outputs:
                         o['next_nodes'] = [modules[n] for n in o['next_nodes']]
-                    print(m.outputs)
 
 
 
