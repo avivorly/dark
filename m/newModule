@@ -1,0 +1,1 @@
+{"name": "newModule", "keys": [], "views": {}, "outputs": {"output": [{"name": {"type": "string", "value": "bbb"}, "color": {"type": "color", "value": "#aaaaaa"}, "value": {"type": "code", "value": "r"}}]}, "code": "data = 5\nr = 1+1", "active": 2}

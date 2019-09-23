@@ -57,7 +57,7 @@ class Input(AWidget):
                 opts['group'] = ('group' in opts and opts['group']) or 'general input'
 
             groups = {
-                'general input': ['string', 'code', 'file', 'integer', 'color']
+                'general input': ['string', 'file', 'integer', 'color']
             }
 
             func_name, w = ['currentTextChanged', QComboBox()]

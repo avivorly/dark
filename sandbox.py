@@ -1,12 +1,12 @@
 import datetime
 from moduleGUI import ModuleGui
 from PyQt5.QtWidgets import QGroupBox, QMessageBox
-from PyQt5.QtGui import QPainter
+from PyQt5.QtGui import QPainter, QPen
 from modules.Module import Module
 import numpy as np
 from numpy.linalg import norm
-
-
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QColor
 class SandBox(QGroupBox):
     def __init__(self):
         super().__init__()
@@ -56,6 +56,7 @@ class SandBox(QGroupBox):
                     mg.update_btn(o['btn'])
 
     def break_btn_connection(self, o, mg):
+        print('break')
         o['next_nodes'].remove(mg.module)
 
         # break_btn_connection
@@ -125,7 +126,9 @@ class SandBox(QGroupBox):
     # def line(self,m_a, m_b):
 
     def paintEvent(self, *args, **kwargs):
+        pen = QPen(Qt.black, 2, Qt.SolidLine)
         qp = QPainter()
+        qp.setPen(pen)
         qp.begin(self)
         for gm in self.gui_modules:
             if gm.module.next_nodes:
@@ -154,6 +157,18 @@ class SandBox(QGroupBox):
                         line = bcc[0], bcc[1], acc[0], acc[1]
 
                         # lines[line] = [gm.module, next_gm.module]
+
+                        pen.setStyle(Qt.CustomDashLine)
+                        pen.setColor(QColor(o['color']['value']))
+                        # pen.setColor(self.backgroundRole(), Qt.white)
+                        pen.setDashPattern([1, 10, 1, 1])
+                        # pen.setDashOffset(50)
+                        # pen.dashOffset(100)
+                        # pen.setWidth(2)
+                        qp.setPen(pen)
+
+                        # pen.setStyle(Qt.DashDotDotLine)
+                        # qp.setPen(pen)
                         qp.drawLine(*line)
                         self.update()
 
@@ -184,28 +199,3 @@ class SandBox(QGroupBox):
 
     def save_to_jpg(self):
         self.grab().save('sandbox.png')
-
- # def mouseReleaseEvent(self, event):
-    #     l1 = self.last_press[0], self.last_press[1], event.x(), event.y()
-    #     for gm in self.gui_modules:
-    #         gm.center()
-    #         if gm.module.next_nodes:
-    #             next_nodes = gm.module.next_nodes
-    #             for next_node in next_nodes:
-    #                 next_gm = next_node.gui
-    #                 acc = next_gm.closest_to(gm.center(), side=True)
-    #                 bcc = gm.closest_to(next_gm.center(), side=False)
-    #                 l2 = bcc[0], bcc[1], acc[0], acc[1]
-    #
-    #                 m_of_line = lambda x1, y1, x2, y2: (y2 - y1) / (x2 - x1)
-    #                 c_of_line = lambda x1, y1, x2, y2: -m_of_line(x1, y1, x2, y2) * x1 + y1
-    #
-    #                 # m1 = m_of_line(*l1)
-    #                 # c1 = c_of_line(*l1)
-    #
-    #                 m2 = m_of_line(*l2)
-    #                 c2 = c_of_line(*l2)
-    #
-    #                 # x = (c2 - c1) / (m1 - m2)
-    #                 # if l1[0] < x < l1[3] and l2[0] < x < l2[3]:
-    #                 #     next_nodes.remove(next_node)

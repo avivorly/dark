@@ -125,8 +125,8 @@ class Module():
         keys = []
 
         for nm, key_type, default in opts['keys']:
-            if key_type == 'code':
-                default = eval(default)
+            # if key_type == 'code':
+            #     default = eval(default)
             o[nm] = default
             keys.append([nm, key_type])
 
