@@ -6,8 +6,11 @@ import inspect
 
 class ModuleGui(QGroupBox):
     def __init__(self, parent, module):
+
         self.sand = parent
         super().__init__(parent)
+
+        self.setStyleSheet("font: 12pt bold")
         self.next_node = None
         self.line = None
         if inspect.isclass(module):

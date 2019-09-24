@@ -12,6 +12,9 @@ class AfelApp(QMainWindow):
     def __init__(self, parent=None):
         super(AfelApp, self).__init__(parent)
         self.setGeometry(10, 10, 1000, 1200)
+        # self.setStyle('Breeze')
+
+        # self.setStyleSheet("font: 30pt")
         # self.setStyleSheet("""
         #
         #              font-size: 200;

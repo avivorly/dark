@@ -29,6 +29,7 @@ class Input(AWidget):
         if tp == 'texteditor':
             value = value or ''
             func_name, w = ['textChanged', QCodeEditor(value)]
+            w.setStyleSheet("font: 12pt")
         if tp == 'integer':
             value = value or 0
             func_name, w = ['valueChanged', QSpinBox()]
@@ -136,6 +137,14 @@ class Input(AWidget):
                         save_until_next = None
         if w:
             self.w = w
+            w.setMinimumHeight(23)
+            try:
+                if (parent.parent().parent().__class__.__name__)=='InputGroup':
+                    w.setMinimumHeight(60)
+            except:
+                1
+
+
             self.layout().addWidget(w)
             getattr(w, func_name).connect(self.update_dic)
 
@@ -145,6 +154,7 @@ class Input(AWidget):
             btn.clicked.connect(self.clear)
             btn.setIcon(QtGui.QIcon('assets/icons/delete.png'))
             self.layout().addWidget(btn)
+
 
         self.present()
 
