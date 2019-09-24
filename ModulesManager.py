@@ -44,15 +44,20 @@ class ModulesManager(QMainWindow):
         self.files.clear()
         self.files.addItems(sorted(fls))
 
-    def load_data(self):
-        name = self.files.selectedItems()[0].text()
-        p = self.dic+'/' + name
-
-        with open(p, 'rb') as handle:
+    def load_data(self, loc = ''):
+        if type(loc) == str:
+            loc = loc
+        else:
+            name = self.files.selectedItems()[0].text()
+            loc = self.dic + '/' + name
+        print(loc)
+        with open(loc, 'rb') as handle:
             b = json.load(handle)
 
-        m = ModuleForm(self, dic = b, folder=self.dic+'/')
+        m = ModuleForm(None, dic = b, folder=self.dic+'/', p =self)
+        m.app = self.app
         m.show()
+        print('done')
 
     def new_module(self):
         m = ModuleForm(self,dic= defaultdict(lambda: {}), folder=self.dic + '/')

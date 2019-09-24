@@ -7,7 +7,8 @@ from InputGraph import InputGroup
 
 
 class ModuleForm(QMainWindow):
-    def __init__(self, parent, dic=defaultdict(lambda: {}), folder=''):
+    def __init__(self, parent, dic=defaultdict(lambda: {}), folder='', p = None):
+        self.p = p
         self.folder = folder
         super().__init__(parent)
         self.setMinimumSize(700, 400)
@@ -109,5 +110,6 @@ class ModuleForm(QMainWindow):
         with open(self.folder + name, 'w') as outfile:
             json.dump({'name': name, 'keys': keys, 'views': self.o['views'], 'outputs':self.o['outputs'],  'code': self.o['code'],
                        'active': self.o['active']}, outfile)
-        self.parent().load_from_path()
-        self.parent().parent().parent().reload()
+        self.p.load_from_path()
+        self.app.reload()
+

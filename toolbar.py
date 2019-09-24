@@ -65,6 +65,7 @@ class ToolBar(QToolBar):
 
     def modules_manager(self):
         m = ModulesManager(self)
+        m.app = self.parent()
         m.show()
 
     def shortcut(self, key):

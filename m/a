@@ -1,1 +1,1 @@
-{"name": "a", "keys": [], "views": {}, "outputs": {}, "code": "data = 5\nprint('=============')\nprint(type(nonReal))\nprint('=============')", "active": 2}
+{"name": "a", "keys": [], "views": {}, "outputs": {}, "code": "data = 5\nprint('=============')\nprint(type(nonReal))\nprint('=============')", "active": 0}
