@@ -1,7 +1,7 @@
 import datetime
 from moduleGUI import ModuleGui
 from PyQt5.QtWidgets import QGroupBox, QMessageBox
-from PyQt5.QtGui import QPainter, QPen
+from PyQt5.QtGui import QPainter, QPen, QFont
 from modules.Module import Module
 import numpy as np
 from numpy.linalg import norm
@@ -126,11 +126,11 @@ class SandBox(QGroupBox):
 
     # def line(self,m_a, m_b):
 
-    def paintEvent(self, *args, **kwargs):
-
+    def paintEvent(self, event):
         qp = QPainter()
-
         qp.begin(self)
+        self.drawText(event, qp)
+
         for gm in self.gui_modules:
             if gm.module.next_nodes:
                 for next_module in gm.module.next_nodes:
@@ -154,7 +154,7 @@ class SandBox(QGroupBox):
 
                         # bcc = gm.closest_to(next_gm.center(), side=False)
                         b = o['btn']
-                        bcc = [b.x()+b.width() + gm.x(), o['btn'].y()+70+gm.y()]
+                        bcc = [b.x() + b.width() + gm.x(), o['btn'].y() + 70 + gm.y()]
                         line = bcc[0], bcc[1], acc[0], acc[1]
 
                         pen = QPen(Qt.black, 2, Qt.SolidLine)
@@ -165,8 +165,15 @@ class SandBox(QGroupBox):
                         qp.setPen(pen)
 
                         qp.drawLine(*line)
+                        pen.setColor(QColor('#black'))
                         self.update()
+        qp.end()
 
+
+    def drawText(self, event, qp):
+        qp.setPen(QColor('blue'))
+        qp.setFont(QFont('Decorative', 10))
+        qp.drawText(event.rect(), Qt.AlignCenter, 'pyana')
 
     def mousePressEvent(self, event):
         self.last_press = [event.x(), event.y()]
